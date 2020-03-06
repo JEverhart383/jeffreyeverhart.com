@@ -21,7 +21,7 @@ Template Name: Single Post
         
         <div class="col-lg-8 col-md-8 blog-main">
             <div class="blog-post">
-              <p class="blog-post-meta"><?php the_date()?> | Posted in <?php the_category(','); ?></p>
+              <p class="blog-post-meta"><?php the_date()?> | Posted in <?php the_category(', '); ?></p>
               <p><?php the_content(); ?></p>
 
             </div>

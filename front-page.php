@@ -48,7 +48,7 @@ Template Name: Front Page
               <!-- Post Thumbnail -->
               <?php if (has_post_thumbnail() ){ ?>
                 <div class="col-lg-3 col-md-4">
-                  <img class="img img-responsive thumbnail" src=<?php the_post_thumbnail_url('small'); ?> /> 
+                  <img class="img img-responsive thumbnail" src=<?php echo get_the_post_thumbnail_url(); ?>> 
                 </div>
 
                 <?php } ?>
@@ -82,12 +82,5 @@ Template Name: Front Page
             <?php endif; ?>
     <!-- End main container div -->
     </div>
-
-
-
-
-   
-
-
 
 <?php get_footer(); ?>

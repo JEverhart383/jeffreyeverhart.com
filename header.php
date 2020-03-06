@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, scrollable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="The personal blog of Jeff Everhart">
+    <meta name="author" content="Jeff Everhart">
+    <meta name="google-site-verification" content="4Rzjb_tE2LibgZFBjx4ITaDOXlS9C_XF42t44Ysoey8" />
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title>
@@ -14,7 +15,7 @@
     </title>
 
     <?php wp_head(); ?>
-
+	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/cfe05867a82d1c7e882d0b6c4/0575b4c676514f21761f90ded.js");</script>
   </head>
 
 
