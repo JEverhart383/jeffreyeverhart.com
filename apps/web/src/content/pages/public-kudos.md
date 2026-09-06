@@ -13,5 +13,3 @@ If you'd be willing to say some kind words about what I was able to help you wit
 I might share the content you write here (minus your email address) in a number of ways, including in an edited form on my own website, Twitter, Facebook, YouTube, or as a part of promotional content for courses or services. If you are a business, non-profit, or otherwise desire internet attention, please include a link to the best place to find you online so the world can know about the awesome stuff we built or accomplished together.
 
 Thanks for reading this far, and many thanks for any kind words you can muster.
-
-\[forminator\_form id="2348"\]
