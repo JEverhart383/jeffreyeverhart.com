@@ -1,4 +1,5 @@
 {
+  "ignoreCommand": "bash \"$(git rev-parse --show-toplevel)/apps/web/ignore-build.sh\"",
   "redirects": [
     {
       "source": "/2010/12/07/hello-world-2-2",

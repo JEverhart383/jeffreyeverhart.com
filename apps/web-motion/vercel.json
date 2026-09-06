@@ -1,0 +1,3 @@
+{
+  "ignoreCommand": "bash \"$(git rev-parse --show-toplevel)/apps/web-motion/ignore-build.sh\""
+}
