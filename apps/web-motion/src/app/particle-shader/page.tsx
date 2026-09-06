@@ -105,8 +105,9 @@ export default function ParticleShaderPage() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const gl = canvas.getContext("webgl");
-    if (!gl) return;
+    const glCtx = canvas.getContext("webgl");
+    if (!glCtx) return;
+    const gl: WebGLRenderingContext = glCtx;
 
     const prog = gl.createProgram()!;
     gl.attachShader(prog, compileShader(gl, gl.VERTEX_SHADER, VERT));

@@ -73,7 +73,6 @@ export default function CssMaskingPage() {
         `radial-gradient(circle at ${tx}px ${ty}px, black ${sr}px, transparent ${sr + f}px)`,
       ].join(", ");
       reveal!.style.maskImage = mask;
-      // @ts-expect-error webkit prefix
       reveal!.style.webkitMaskImage = mask;
 
       rafRef.current = requestAnimationFrame(tick);
