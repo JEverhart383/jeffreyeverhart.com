@@ -1,0 +1,116 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const recentPosts = allPosts.slice(0, 5);
+---
+
+<BaseLayout title="Jeff Everhart">
+  <!-- Hero -->
+  <section class="hero-section bg-brand-light-blue text-white py-20 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <h1 class="font-sans text-4xl sm:text-5xl font-bold mb-2">Hello out there web friend.</h1>
+      <h2 class="font-sans text-2xl sm:text-3xl font-semibold mb-8">My name is Jeff.</h2>
+
+      <!-- Network SVG graphic -->
+      <div class="hero-graphic flex justify-center mb-8">
+        <svg width="240" height="160" viewBox="0 0 300 200" aria-hidden="true">
+          <line x1="25" x2="150" y1="25" y2="75" stroke="#303434" fill="transparent" stroke-width="5"/>
+          <line x1="25" x2="100" y1="25" y2="175" stroke="#303434" fill="transparent" stroke-width="5"/>
+          <line x1="25" x2="200" y1="25" y2="165" stroke="#303434" fill="transparent" stroke-width="5"/>
+          <line x1="150" x2="100" y1="75" y2="175" stroke="#303434" fill="transparent" stroke-width="5"/>
+          <line x1="200" x2="256" y1="165" y2="47" stroke="#303434" fill="transparent" stroke-width="5"/>
+          <circle cx="25" cy="25" r="25" fill="#a61d58" />
+          <circle cx="150" cy="75" r="25" fill="#a61d58" />
+          <circle cx="100" cy="175" r="25" fill="#a61d58" />
+          <circle cx="200" cy="165" r="25" fill="#a61d58" />
+          <circle cx="256" cy="47" r="25" fill="#1d86a6" />
+        </svg>
+      </div>
+
+      <h2 class="font-sans text-2xl font-semibold">Thanks for connecting.</h2>
+    </div>
+  </section>
+
+  <!-- About strip -->
+  <section class="about-strip bg-gray-50 py-14 px-4 border-t border-b border-gray-100">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 text-center mb-10">
+        What I Do
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="about-item bg-white border border-gray-100 rounded-lg p-6">
+          <div class="about-item-icon mb-4 text-brand-blue">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/>
+            </svg>
+          </div>
+          <h3 class="font-sans font-bold text-gray-900 mb-2">Build</h3>
+          <p class="font-serif text-gray-600 text-sm leading-relaxed">
+            Web applications, APIs, and tools. From weekend experiments to production systems.
+          </p>
+        </div>
+        <div class="about-item bg-white border border-gray-100 rounded-lg p-6">
+          <div class="about-item-icon mb-4 text-brand-blue">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
+            </svg>
+          </div>
+          <h3 class="font-sans font-bold text-gray-900 mb-2">Write</h3>
+          <p class="font-serif text-gray-600 text-sm leading-relaxed">
+            Tutorials, deep dives, and opinions on JavaScript, APIs, and the craft of web development.
+          </p>
+        </div>
+        <div class="about-item bg-white border border-gray-100 rounded-lg p-6">
+          <div class="about-item-icon mb-4 text-brand-blue">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/>
+            </svg>
+          </div>
+          <h3 class="font-sans font-bold text-gray-900 mb-2">Connect</h3>
+          <p class="font-serif text-gray-600 text-sm leading-relaxed">
+            Sharing what I learn, learning from others. The web works better when we build it together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent posts -->
+  <section class="blog-section max-w-3xl mx-auto px-4 py-12">
+    <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-8">
+      Recent Writing
+    </h2>
+    {recentPosts.length === 0 ? (
+      <p class="font-serif text-gray-500 text-center">No posts yet. Check back soon.</p>
+    ) : (
+      <div class="space-y-6">
+        {recentPosts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            date={post.data.date}
+            slug={post.slug}
+            excerpt={post.data.excerpt}
+            heroImage={post.data.heroImage}
+            categories={post.data.categories}
+          />
+        ))}
+      </div>
+    )}
+
+    {allPosts.length > 5 && (
+      <div class="mt-10 text-center">
+        <a
+          href="/blog"
+          class="view-all-link inline-block font-sans font-semibold text-sm text-brand-blue border border-brand-blue px-6 py-2.5 rounded transition-colors hover:bg-brand-blue hover:text-white"
+        >
+          View all {allPosts.length} posts &rarr;
+        </a>
+      </div>
+    )}
+  </section>
+</BaseLayout>

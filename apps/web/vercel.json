@@ -1,0 +1,1054 @@
+{
+  "redirects": [
+    {
+      "source": "/2010/12/07/hello-world-2-2",
+      "destination": "/blog/hello-world-2-2",
+      "permanent": true
+    },
+    {
+      "source": "/2010/12/07/hello-world-2-2/",
+      "destination": "/blog/hello-world-2-2",
+      "permanent": true
+    },
+    {
+      "source": "/2012/02/11/reading-writing-assignments",
+      "destination": "/blog/reading-writing-assignments",
+      "permanent": true
+    },
+    {
+      "source": "/2012/02/11/reading-writing-assignments/",
+      "destination": "/blog/reading-writing-assignments",
+      "permanent": true
+    },
+    {
+      "source": "/2012/02/01/using-cloud-computing-for-collaborative-research-projects",
+      "destination": "/blog/using-cloud-computing-for-collaborative-research-projects",
+      "permanent": true
+    },
+    {
+      "source": "/2012/02/01/using-cloud-computing-for-collaborative-research-projects/",
+      "destination": "/blog/using-cloud-computing-for-collaborative-research-projects",
+      "permanent": true
+    },
+    {
+      "source": "/2012/02/27/applications-of-the-e-portfolio",
+      "destination": "/blog/applications-of-the-e-portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/2012/02/27/applications-of-the-e-portfolio/",
+      "destination": "/blog/applications-of-the-e-portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/2012/04/10/online-education-spreads-to-high-schools",
+      "destination": "/blog/online-education-spreads-to-high-schools",
+      "permanent": true
+    },
+    {
+      "source": "/2012/04/10/online-education-spreads-to-high-schools/",
+      "destination": "/blog/online-education-spreads-to-high-schools",
+      "permanent": true
+    },
+    {
+      "source": "/2012/11/06/increasing-productivity-with-the-power-of-observation",
+      "destination": "/blog/increasing-productivity-with-the-power-of-observation",
+      "permanent": true
+    },
+    {
+      "source": "/2012/11/06/increasing-productivity-with-the-power-of-observation/",
+      "destination": "/blog/increasing-productivity-with-the-power-of-observation",
+      "permanent": true
+    },
+    {
+      "source": "/2012/11/09/the-challenge-of-making-it-new",
+      "destination": "/blog/the-challenge-of-making-it-new",
+      "permanent": true
+    },
+    {
+      "source": "/2012/11/09/the-challenge-of-making-it-new/",
+      "destination": "/blog/the-challenge-of-making-it-new",
+      "permanent": true
+    },
+    {
+      "source": "/2012/11/09/leaders-let-people-do-not-follow",
+      "destination": "/blog/leaders-let-people-do-not-follow",
+      "permanent": true
+    },
+    {
+      "source": "/2012/11/09/leaders-let-people-do-not-follow/",
+      "destination": "/blog/leaders-let-people-do-not-follow",
+      "permanent": true
+    },
+    {
+      "source": "/2011/06/28/summer-2011",
+      "destination": "/blog/summer-2011",
+      "permanent": true
+    },
+    {
+      "source": "/2011/06/28/summer-2011/",
+      "destination": "/blog/summer-2011",
+      "permanent": true
+    },
+    {
+      "source": "/2011/07/05/soccer-most-intense-workout-ever-screw-p90x",
+      "destination": "/blog/soccer-most-intense-workout-ever-screw-p90x",
+      "permanent": true
+    },
+    {
+      "source": "/2011/07/05/soccer-most-intense-workout-ever-screw-p90x/",
+      "destination": "/blog/soccer-most-intense-workout-ever-screw-p90x",
+      "permanent": true
+    },
+    {
+      "source": "/2011/09/21/teaching-grammar-using-manipulative-devices",
+      "destination": "/blog/teaching-grammar-using-manipulative-devices",
+      "permanent": true
+    },
+    {
+      "source": "/2011/09/21/teaching-grammar-using-manipulative-devices/",
+      "destination": "/blog/teaching-grammar-using-manipulative-devices",
+      "permanent": true
+    },
+    {
+      "source": "/2011/12/02/conceptualizing-the-ell-experience",
+      "destination": "/blog/conceptualizing-the-ell-experience",
+      "permanent": true
+    },
+    {
+      "source": "/2011/12/02/conceptualizing-the-ell-experience/",
+      "destination": "/blog/conceptualizing-the-ell-experience",
+      "permanent": true
+    },
+    {
+      "source": "/2012/03/31/project-based-learning",
+      "destination": "/blog/project-based-learning",
+      "permanent": true
+    },
+    {
+      "source": "/2012/03/31/project-based-learning/",
+      "destination": "/blog/project-based-learning",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/08/weekly-wordpress-challenge-2-itc",
+      "destination": "/blog/weekly-wordpress-challenge-2-itc",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/08/weekly-wordpress-challenge-2-itc/",
+      "destination": "/blog/weekly-wordpress-challenge-2-itc",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/12/understanding-and-promoting-innovation-in-21st-century-communities-part-1",
+      "destination": "/blog/understanding-and-promoting-innovation-in-21st-century-communities-part-1",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/12/understanding-and-promoting-innovation-in-21st-century-communities-part-1/",
+      "destination": "/blog/understanding-and-promoting-innovation-in-21st-century-communities-part-1",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/12/understanding-and-promoting-innovation-in-21st-century-communities-part-2",
+      "destination": "/blog/understanding-and-promoting-innovation-in-21st-century-communities-part-2",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/12/understanding-and-promoting-innovation-in-21st-century-communities-part-2/",
+      "destination": "/blog/understanding-and-promoting-innovation-in-21st-century-communities-part-2",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/22/weekly-wordpress-challenge-3-itc",
+      "destination": "/blog/weekly-wordpress-challenge-3-itc",
+      "permanent": true
+    },
+    {
+      "source": "/2012/10/22/weekly-wordpress-challenge-3-itc/",
+      "destination": "/blog/weekly-wordpress-challenge-3-itc",
+      "permanent": true
+    },
+    {
+      "source": "/2013/02/09/how-to-create-awareness-for-your-cause",
+      "destination": "/blog/how-to-create-awareness-for-your-cause",
+      "permanent": true
+    },
+    {
+      "source": "/2013/02/09/how-to-create-awareness-for-your-cause/",
+      "destination": "/blog/how-to-create-awareness-for-your-cause",
+      "permanent": true
+    },
+    {
+      "source": "/2013/04/10/how-to-crush-any-large-project-in-3-easy-steps",
+      "destination": "/blog/how-to-crush-any-large-project-in-3-easy-steps",
+      "permanent": true
+    },
+    {
+      "source": "/2013/04/10/how-to-crush-any-large-project-in-3-easy-steps/",
+      "destination": "/blog/how-to-crush-any-large-project-in-3-easy-steps",
+      "permanent": true
+    },
+    {
+      "source": "/2014/01/30/year-of-debt-destruction-q1",
+      "destination": "/blog/year-of-debt-destruction-q1",
+      "permanent": true
+    },
+    {
+      "source": "/2014/01/30/year-of-debt-destruction-q1/",
+      "destination": "/blog/year-of-debt-destruction-q1",
+      "permanent": true
+    },
+    {
+      "source": "/2012/01/04/hello-world-2",
+      "destination": "/blog/hello-world-2",
+      "permanent": true
+    },
+    {
+      "source": "/2012/01/04/hello-world-2/",
+      "destination": "/blog/hello-world-2",
+      "permanent": true
+    },
+    {
+      "source": "/2014/01/31/tech-tip-randomizing-data-in-microsoft-excel",
+      "destination": "/blog/tech-tip-randomizing-data-in-microsoft-excel",
+      "permanent": true
+    },
+    {
+      "source": "/2014/01/31/tech-tip-randomizing-data-in-microsoft-excel/",
+      "destination": "/blog/tech-tip-randomizing-data-in-microsoft-excel",
+      "permanent": true
+    },
+    {
+      "source": "/2014/01/31/tech-tip-how-to-send-a-confirmation-email-with-google-forms",
+      "destination": "/blog/tech-tip-how-to-send-a-confirmation-email-with-google-forms",
+      "permanent": true
+    },
+    {
+      "source": "/2014/01/31/tech-tip-how-to-send-a-confirmation-email-with-google-forms/",
+      "destination": "/blog/tech-tip-how-to-send-a-confirmation-email-with-google-forms",
+      "permanent": true
+    },
+    {
+      "source": "/2014/02/07/the-possibilities-of-human-networks",
+      "destination": "/blog/the-possibilities-of-human-networks",
+      "permanent": true
+    },
+    {
+      "source": "/2014/02/07/the-possibilities-of-human-networks/",
+      "destination": "/blog/the-possibilities-of-human-networks",
+      "permanent": true
+    },
+    {
+      "source": "/2014/02/17/5-easy-tips-professional-podcast",
+      "destination": "/blog/5-easy-tips-professional-podcast",
+      "permanent": true
+    },
+    {
+      "source": "/2014/02/17/5-easy-tips-professional-podcast/",
+      "destination": "/blog/5-easy-tips-professional-podcast",
+      "permanent": true
+    },
+    {
+      "source": "/2014/03/26/the-global-importance-of-openness-to-education",
+      "destination": "/blog/the-global-importance-of-openness-to-education",
+      "permanent": true
+    },
+    {
+      "source": "/2014/03/26/the-global-importance-of-openness-to-education/",
+      "destination": "/blog/the-global-importance-of-openness-to-education",
+      "permanent": true
+    },
+    {
+      "source": "/2014/05/22/ala-conference-2014-handout",
+      "destination": "/blog/ala-conference-2014-handout",
+      "permanent": true
+    },
+    {
+      "source": "/2014/05/22/ala-conference-2014-handout/",
+      "destination": "/blog/ala-conference-2014-handout",
+      "permanent": true
+    },
+    {
+      "source": "/2015/03/22/how-to-use-the-google-fonts-api-in-your-website",
+      "destination": "/blog/how-to-use-the-google-fonts-api-in-your-website",
+      "permanent": true
+    },
+    {
+      "source": "/2015/03/22/how-to-use-the-google-fonts-api-in-your-website/",
+      "destination": "/blog/how-to-use-the-google-fonts-api-in-your-website",
+      "permanent": true
+    },
+    {
+      "source": "/2015/01/30/tech-tip-google-forms-confirmation-email-with-attachments",
+      "destination": "/blog/tech-tip-google-forms-confirmation-email-with-attachments",
+      "permanent": true
+    },
+    {
+      "source": "/2015/01/30/tech-tip-google-forms-confirmation-email-with-attachments/",
+      "destination": "/blog/tech-tip-google-forms-confirmation-email-with-attachments",
+      "permanent": true
+    },
+    {
+      "source": "/2015/04/24/the-abcs-of-the-canvas-rest-api",
+      "destination": "/blog/the-abcs-of-the-canvas-rest-api",
+      "permanent": true
+    },
+    {
+      "source": "/2015/04/24/the-abcs-of-the-canvas-rest-api/",
+      "destination": "/blog/the-abcs-of-the-canvas-rest-api",
+      "permanent": true
+    },
+    {
+      "source": "/2015/04/24/bringin-the-bling-developing-visually-appealing-and-functional-canvas-pages",
+      "destination": "/blog/bringin-the-bling-developing-visually-appealing-and-functional-canvas-pages",
+      "permanent": true
+    },
+    {
+      "source": "/2015/04/24/bringin-the-bling-developing-visually-appealing-and-functional-canvas-pages/",
+      "destination": "/blog/bringin-the-bling-developing-visually-appealing-and-functional-canvas-pages",
+      "permanent": true
+    },
+    {
+      "source": "/2015/11/03/how-to-create-a-google-calendar-event-with-google-forms",
+      "destination": "/blog/how-to-create-a-google-calendar-event-with-google-forms",
+      "permanent": true
+    },
+    {
+      "source": "/2015/11/03/how-to-create-a-google-calendar-event-with-google-forms/",
+      "destination": "/blog/how-to-create-a-google-calendar-event-with-google-forms",
+      "permanent": true
+    },
+    {
+      "source": "/2016/01/13/how-to-insert-and-remove-rows-and-columns-in-google-sheets",
+      "destination": "/blog/how-to-insert-and-remove-rows-and-columns-in-google-sheets",
+      "permanent": true
+    },
+    {
+      "source": "/2016/01/13/how-to-insert-and-remove-rows-and-columns-in-google-sheets/",
+      "destination": "/blog/how-to-insert-and-remove-rows-and-columns-in-google-sheets",
+      "permanent": true
+    },
+    {
+      "source": "/2016/02/17/debugging-node-js-processes-error-events-js-141",
+      "destination": "/blog/debugging-node-js-processes-error-events-js-141",
+      "permanent": true
+    },
+    {
+      "source": "/2016/02/17/debugging-node-js-processes-error-events-js-141/",
+      "destination": "/blog/debugging-node-js-processes-error-events-js-141",
+      "permanent": true
+    },
+    {
+      "source": "/2016/02/24/using-google-sheet-and-google-apps-script-to-work-with-apis",
+      "destination": "/blog/using-google-sheet-and-google-apps-script-to-work-with-apis",
+      "permanent": true
+    },
+    {
+      "source": "/2016/02/24/using-google-sheet-and-google-apps-script-to-work-with-apis/",
+      "destination": "/blog/using-google-sheet-and-google-apps-script-to-work-with-apis",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/01/the-pros-and-cons-of-using-google-sheets-as-an-application-backend",
+      "destination": "/blog/the-pros-and-cons-of-using-google-sheets-as-an-application-backend",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/01/the-pros-and-cons-of-using-google-sheets-as-an-application-backend/",
+      "destination": "/blog/the-pros-and-cons-of-using-google-sheets-as-an-application-backend",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/05/creating-a-video-streaming-classroom-with-aws-angular-and-google-material-design-part-1",
+      "destination": "/blog/creating-a-video-streaming-classroom-with-aws-angular-and-google-material-design-part-1",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/05/creating-a-video-streaming-classroom-with-aws-angular-and-google-material-design-part-1/",
+      "destination": "/blog/creating-a-video-streaming-classroom-with-aws-angular-and-google-material-design-part-1",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/08/sxswedu-day-1-reflections-and-round-up",
+      "destination": "/blog/sxswedu-day-1-reflections-and-round-up",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/08/sxswedu-day-1-reflections-and-round-up/",
+      "destination": "/blog/sxswedu-day-1-reflections-and-round-up",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/11/sxswedu-days-2-3-reflections-and-round-up",
+      "destination": "/blog/sxswedu-days-2-3-reflections-and-round-up",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/11/sxswedu-days-2-3-reflections-and-round-up/",
+      "destination": "/blog/sxswedu-days-2-3-reflections-and-round-up",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/12/heat-map-d3",
+      "destination": "/blog/heat-map-d3",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/12/heat-map-d3/",
+      "destination": "/blog/heat-map-d3",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/12/flipped-vs-hybrid-pedagogy-infographic",
+      "destination": "/blog/flipped-vs-hybrid-pedagogy-infographic",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/12/flipped-vs-hybrid-pedagogy-infographic/",
+      "destination": "/blog/flipped-vs-hybrid-pedagogy-infographic",
+      "permanent": true
+    },
+    {
+      "source": "/2016/05/02/add-custom-menus-google-docs-sheets-forms",
+      "destination": "/blog/add-custom-menus-google-docs-sheets-forms",
+      "permanent": true
+    },
+    {
+      "source": "/2016/05/02/add-custom-menus-google-docs-sheets-forms/",
+      "destination": "/blog/add-custom-menus-google-docs-sheets-forms",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/13/teens-technology-social-media-infographic",
+      "destination": "/blog/teens-technology-social-media-infographic",
+      "permanent": true
+    },
+    {
+      "source": "/2016/03/13/teens-technology-social-media-infographic/",
+      "destination": "/blog/teens-technology-social-media-infographic",
+      "permanent": true
+    },
+    {
+      "source": "/2016/04/14/how-to-serve-json-using-the-google-apps-script-content-service",
+      "destination": "/blog/how-to-serve-json-using-the-google-apps-script-content-service",
+      "permanent": true
+    },
+    {
+      "source": "/2016/04/14/how-to-serve-json-using-the-google-apps-script-content-service/",
+      "destination": "/blog/how-to-serve-json-using-the-google-apps-script-content-service",
+      "permanent": true
+    },
+    {
+      "source": "/2016/04/23/how-to-build-http-file-server-with-node-js",
+      "destination": "/blog/how-to-build-http-file-server-with-node-js",
+      "permanent": true
+    },
+    {
+      "source": "/2016/04/23/how-to-build-http-file-server-with-node-js/",
+      "destination": "/blog/how-to-build-http-file-server-with-node-js",
+      "permanent": true
+    },
+    {
+      "source": "/2016/04/30/images-data-uris-faster-page-loads",
+      "destination": "/blog/images-data-uris-faster-page-loads",
+      "permanent": true
+    },
+    {
+      "source": "/2016/04/30/images-data-uris-faster-page-loads/",
+      "destination": "/blog/images-data-uris-faster-page-loads",
+      "permanent": true
+    },
+    {
+      "source": "/2016/08/06/fix-typeerror-cannot-read-property-values-undefined",
+      "destination": "/blog/fix-typeerror-cannot-read-property-values-undefined",
+      "permanent": true
+    },
+    {
+      "source": "/2016/08/06/fix-typeerror-cannot-read-property-values-undefined/",
+      "destination": "/blog/fix-typeerror-cannot-read-property-values-undefined",
+      "permanent": true
+    },
+    {
+      "source": "/2016/08/21/using-cleanup-method-rpi-gpio-raspberry-pi-tutorial",
+      "destination": "/blog/using-cleanup-method-rpi-gpio-raspberry-pi-tutorial",
+      "permanent": true
+    },
+    {
+      "source": "/2016/08/21/using-cleanup-method-rpi-gpio-raspberry-pi-tutorial/",
+      "destination": "/blog/using-cleanup-method-rpi-gpio-raspberry-pi-tutorial",
+      "permanent": true
+    },
+    {
+      "source": "/2016/08/27/traffic-light-raspberry-pi-python",
+      "destination": "/blog/traffic-light-raspberry-pi-python",
+      "permanent": true
+    },
+    {
+      "source": "/2016/08/27/traffic-light-raspberry-pi-python/",
+      "destination": "/blog/traffic-light-raspberry-pi-python",
+      "permanent": true
+    },
+    {
+      "source": "/2016/12/11/wordpress-nginx-proxy-server-subdomain-subdirectory",
+      "destination": "/blog/wordpress-nginx-proxy-server-subdomain-subdirectory",
+      "permanent": true
+    },
+    {
+      "source": "/2016/12/11/wordpress-nginx-proxy-server-subdomain-subdirectory/",
+      "destination": "/blog/wordpress-nginx-proxy-server-subdomain-subdirectory",
+      "permanent": true
+    },
+    {
+      "source": "/2017/01/19/command-line-download-files-curl-command",
+      "destination": "/blog/command-line-download-files-curl-command",
+      "permanent": true
+    },
+    {
+      "source": "/2017/01/19/command-line-download-files-curl-command/",
+      "destination": "/blog/command-line-download-files-curl-command",
+      "permanent": true
+    },
+    {
+      "source": "/2017/02/20/future-javascript-browser",
+      "destination": "/blog/future-javascript-browser",
+      "permanent": true
+    },
+    {
+      "source": "/2017/02/20/future-javascript-browser/",
+      "destination": "/blog/future-javascript-browser",
+      "permanent": true
+    },
+    {
+      "source": "/2017/05/08/server-side-caching-nginx",
+      "destination": "/blog/server-side-caching-nginx",
+      "permanent": true
+    },
+    {
+      "source": "/2017/05/08/server-side-caching-nginx/",
+      "destination": "/blog/server-side-caching-nginx",
+      "permanent": true
+    },
+    {
+      "source": "/2017/06/14/adding-custom-fields-wordpress-json-api",
+      "destination": "/blog/adding-custom-fields-wordpress-json-api",
+      "permanent": true
+    },
+    {
+      "source": "/2017/06/14/adding-custom-fields-wordpress-json-api/",
+      "destination": "/blog/adding-custom-fields-wordpress-json-api",
+      "permanent": true
+    },
+    {
+      "source": "/2017/07/06/designing-svgs-sketch-richmond-pulse-bus-line",
+      "destination": "/blog/designing-svgs-sketch-richmond-pulse-bus-line",
+      "permanent": true
+    },
+    {
+      "source": "/2017/07/06/designing-svgs-sketch-richmond-pulse-bus-line/",
+      "destination": "/blog/designing-svgs-sketch-richmond-pulse-bus-line",
+      "permanent": true
+    },
+    {
+      "source": "/2017/07/08/visualizing-geographic-data-d3",
+      "destination": "/blog/visualizing-geographic-data-d3",
+      "permanent": true
+    },
+    {
+      "source": "/2017/07/08/visualizing-geographic-data-d3/",
+      "destination": "/blog/visualizing-geographic-data-d3",
+      "permanent": true
+    },
+    {
+      "source": "/2017/07/27/shadow-metrics-tracking-gateway",
+      "destination": "/blog/shadow-metrics-tracking-gateway",
+      "permanent": true
+    },
+    {
+      "source": "/2017/07/27/shadow-metrics-tracking-gateway/",
+      "destination": "/blog/shadow-metrics-tracking-gateway",
+      "permanent": true
+    },
+    {
+      "source": "/2017/08/12/creating-crud-web-app-google-sheets",
+      "destination": "/blog/creating-crud-web-app-google-sheets",
+      "permanent": true
+    },
+    {
+      "source": "/2017/08/12/creating-crud-web-app-google-sheets/",
+      "destination": "/blog/creating-crud-web-app-google-sheets",
+      "permanent": true
+    },
+    {
+      "source": "/2017/08/29/audiographics-annotating-sound",
+      "destination": "/blog/audiographics-annotating-sound",
+      "permanent": true
+    },
+    {
+      "source": "/2017/08/29/audiographics-annotating-sound/",
+      "destination": "/blog/audiographics-annotating-sound",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/08/software-development-hard",
+      "destination": "/blog/software-development-hard",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/08/software-development-hard/",
+      "destination": "/blog/software-development-hard",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/14/open-files-folder-sublime-text-terminal",
+      "destination": "/blog/open-files-folder-sublime-text-terminal",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/14/open-files-folder-sublime-text-terminal/",
+      "destination": "/blog/open-files-folder-sublime-text-terminal",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/22/automate-deployments-github-webhooks",
+      "destination": "/blog/automate-deployments-github-webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/22/automate-deployments-github-webhooks/",
+      "destination": "/blog/automate-deployments-github-webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/22/debugging-wordpress-php-vs-code-mamp",
+      "destination": "/blog/debugging-wordpress-php-vs-code-mamp",
+      "permanent": true
+    },
+    {
+      "source": "/2017/09/22/debugging-wordpress-php-vs-code-mamp/",
+      "destination": "/blog/debugging-wordpress-php-vs-code-mamp",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/03/analyzing-and-visualizing-networks",
+      "destination": "/blog/analyzing-and-visualizing-networks",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/03/analyzing-and-visualizing-networks/",
+      "destination": "/blog/analyzing-and-visualizing-networks",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/17/outsmarting-google-generating-download-links-google-app-script",
+      "destination": "/blog/outsmarting-google-generating-download-links-google-app-script",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/17/outsmarting-google-generating-download-links-google-app-script/",
+      "destination": "/blog/outsmarting-google-generating-download-links-google-app-script",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/25/using-amcharts-vue-webpack",
+      "destination": "/blog/using-amcharts-vue-webpack",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/25/using-amcharts-vue-webpack/",
+      "destination": "/blog/using-amcharts-vue-webpack",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/25/extending-wp-rest-api-index-route-response",
+      "destination": "/blog/extending-wp-rest-api-index-route-response",
+      "permanent": true
+    },
+    {
+      "source": "/2017/10/25/extending-wp-rest-api-index-route-response/",
+      "destination": "/blog/extending-wp-rest-api-index-route-response",
+      "permanent": true
+    },
+    {
+      "source": "/2017/11/04/mysql-workbench-error-code-2013-lost-connection-mysql-server-query",
+      "destination": "/blog/mysql-workbench-error-code-2013-lost-connection-mysql-server-query",
+      "permanent": true
+    },
+    {
+      "source": "/2017/11/04/mysql-workbench-error-code-2013-lost-connection-mysql-server-query/",
+      "destination": "/blog/mysql-workbench-error-code-2013-lost-connection-mysql-server-query",
+      "permanent": true
+    },
+    {
+      "source": "/2017/12/01/resetting-triggers-google-apps-script",
+      "destination": "/blog/resetting-triggers-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2017/12/01/resetting-triggers-google-apps-script/",
+      "destination": "/blog/resetting-triggers-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2017/12/11/making-chatbot-amazon-lex",
+      "destination": "/blog/making-chatbot-amazon-lex",
+      "permanent": true
+    },
+    {
+      "source": "/2017/12/11/making-chatbot-amazon-lex/",
+      "destination": "/blog/making-chatbot-amazon-lex",
+      "permanent": true
+    },
+    {
+      "source": "/2018/01/30/wordpress-javascript-snippets",
+      "destination": "/blog/wordpress-javascript-snippets",
+      "permanent": true
+    },
+    {
+      "source": "/2018/01/30/wordpress-javascript-snippets/",
+      "destination": "/blog/wordpress-javascript-snippets",
+      "permanent": true
+    },
+    {
+      "source": "/2018/02/05/web-gis-leaflet-wordpress",
+      "destination": "/blog/web-gis-leaflet-wordpress",
+      "permanent": true
+    },
+    {
+      "source": "/2018/02/05/web-gis-leaflet-wordpress/",
+      "destination": "/blog/web-gis-leaflet-wordpress",
+      "permanent": true
+    },
+    {
+      "source": "/2018/02/12/using-aws-for-data-analysis",
+      "destination": "/blog/using-aws-for-data-analysis",
+      "permanent": true
+    },
+    {
+      "source": "/2018/02/12/using-aws-for-data-analysis/",
+      "destination": "/blog/using-aws-for-data-analysis",
+      "permanent": true
+    },
+    {
+      "source": "/2018/03/15/digging-into-the-gutenberg-editor",
+      "destination": "/blog/digging-into-the-gutenberg-editor",
+      "permanent": true
+    },
+    {
+      "source": "/2018/03/15/digging-into-the-gutenberg-editor/",
+      "destination": "/blog/digging-into-the-gutenberg-editor",
+      "permanent": true
+    },
+    {
+      "source": "/2018/04/10/data-visualization-in-observable",
+      "destination": "/blog/data-visualization-in-observable",
+      "permanent": true
+    },
+    {
+      "source": "/2018/04/10/data-visualization-in-observable/",
+      "destination": "/blog/data-visualization-in-observable",
+      "permanent": true
+    },
+    {
+      "source": "/2018/04/18/simple-is-always-better",
+      "destination": "/blog/simple-is-always-better",
+      "permanent": true
+    },
+    {
+      "source": "/2018/04/18/simple-is-always-better/",
+      "destination": "/blog/simple-is-always-better",
+      "permanent": true
+    },
+    {
+      "source": "/2018/05/18/storytelling-with-scrolling-map-background",
+      "destination": "/blog/storytelling-with-scrolling-map-background",
+      "permanent": true
+    },
+    {
+      "source": "/2018/05/18/storytelling-with-scrolling-map-background/",
+      "destination": "/blog/storytelling-with-scrolling-map-background",
+      "permanent": true
+    },
+    {
+      "source": "/2018/05/31/aggregating-data-hypotheses-with-firebase",
+      "destination": "/blog/aggregating-data-hypotheses-with-firebase",
+      "permanent": true
+    },
+    {
+      "source": "/2018/05/31/aggregating-data-hypotheses-with-firebase/",
+      "destination": "/blog/aggregating-data-hypotheses-with-firebase",
+      "permanent": true
+    },
+    {
+      "source": "/2018/07/25/recursive-recursion-with-vue",
+      "destination": "/blog/recursive-recursion-with-vue",
+      "permanent": true
+    },
+    {
+      "source": "/2018/07/25/recursive-recursion-with-vue/",
+      "destination": "/blog/recursive-recursion-with-vue",
+      "permanent": true
+    },
+    {
+      "source": "/2018/08/02/load-testing-wordpress-multisite",
+      "destination": "/blog/load-testing-wordpress-multisite",
+      "permanent": true
+    },
+    {
+      "source": "/2018/08/02/load-testing-wordpress-multisite/",
+      "destination": "/blog/load-testing-wordpress-multisite",
+      "permanent": true
+    },
+    {
+      "source": "/2018/08/27/using-the-right-tools-indexing-in-mysql",
+      "destination": "/blog/using-the-right-tools-indexing-in-mysql",
+      "permanent": true
+    },
+    {
+      "source": "/2018/08/27/using-the-right-tools-indexing-in-mysql/",
+      "destination": "/blog/using-the-right-tools-indexing-in-mysql",
+      "permanent": true
+    },
+    {
+      "source": "/2018/08/29/creating-a-virtual-assistant-with-amazon-lex-and-lambda",
+      "destination": "/blog/creating-a-virtual-assistant-with-amazon-lex-and-lambda",
+      "permanent": true
+    },
+    {
+      "source": "/2018/08/29/creating-a-virtual-assistant-with-amazon-lex-and-lambda/",
+      "destination": "/blog/creating-a-virtual-assistant-with-amazon-lex-and-lambda",
+      "permanent": true
+    },
+    {
+      "source": "/2018/09/17/auto-fill-google-doc-from-google-form-submission",
+      "destination": "/blog/auto-fill-google-doc-from-google-form-submission",
+      "permanent": true
+    },
+    {
+      "source": "/2018/09/17/auto-fill-google-doc-from-google-form-submission/",
+      "destination": "/blog/auto-fill-google-doc-from-google-form-submission",
+      "permanent": true
+    },
+    {
+      "source": "/2018/10/05/translate-text-google-doc-using-google-apps-script",
+      "destination": "/blog/translate-text-google-doc-using-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2018/10/05/translate-text-google-doc-using-google-apps-script/",
+      "destination": "/blog/translate-text-google-doc-using-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2018/12/07/setup-aws-cloudfront-for-wordpress-scaling-this-blog",
+      "destination": "/blog/setup-aws-cloudfront-for-wordpress-scaling-this-blog",
+      "permanent": true
+    },
+    {
+      "source": "/2018/12/07/setup-aws-cloudfront-for-wordpress-scaling-this-blog/",
+      "destination": "/blog/setup-aws-cloudfront-for-wordpress-scaling-this-blog",
+      "permanent": true
+    },
+    {
+      "source": "/2019/02/21/fixing-php-warning-mysqli_real_connect-hy000-2002-with-wp-cli-and-mamp",
+      "destination": "/blog/fixing-php-warning-mysqli-real-connect-hy000-2002-with-wp-cli-and-mamp",
+      "permanent": true
+    },
+    {
+      "source": "/2019/02/21/fixing-php-warning-mysqli_real_connect-hy000-2002-with-wp-cli-and-mamp/",
+      "destination": "/blog/fixing-php-warning-mysqli-real-connect-hy000-2002-with-wp-cli-and-mamp",
+      "permanent": true
+    },
+    {
+      "source": "/2019/03/01/retrieve-rows-from-google-spreadsheet-with-google-apps-script",
+      "destination": "/blog/retrieve-rows-from-google-spreadsheet-with-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2019/03/01/retrieve-rows-from-google-spreadsheet-with-google-apps-script/",
+      "destination": "/blog/retrieve-rows-from-google-spreadsheet-with-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2019/03/07/match-multiple-patterns-with-grep-and",
+      "destination": "/blog/match-multiple-patterns-with-grep-and",
+      "permanent": true
+    },
+    {
+      "source": "/2019/03/07/match-multiple-patterns-with-grep-and/",
+      "destination": "/blog/match-multiple-patterns-with-grep-and",
+      "permanent": true
+    },
+    {
+      "source": "/2019/04/10/scaling-wordpress-databases-remote-servers-sharding-replication-ludicrous-db-aws",
+      "destination": "/blog/scaling-wordpress-databases-remote-servers-sharding-replication-ludicrous-db-aws",
+      "permanent": true
+    },
+    {
+      "source": "/2019/04/10/scaling-wordpress-databases-remote-servers-sharding-replication-ludicrous-db-aws/",
+      "destination": "/blog/scaling-wordpress-databases-remote-servers-sharding-replication-ludicrous-db-aws",
+      "permanent": true
+    },
+    {
+      "source": "/2019/05/03/parsing-html-xml-with-nodejs-cheerio",
+      "destination": "/blog/parsing-html-xml-with-nodejs-cheerio",
+      "permanent": true
+    },
+    {
+      "source": "/2019/05/03/parsing-html-xml-with-nodejs-cheerio/",
+      "destination": "/blog/parsing-html-xml-with-nodejs-cheerio",
+      "permanent": true
+    },
+    {
+      "source": "/2019/10/10/adding-custom-routes-to-wordpress-rest-api",
+      "destination": "/blog/adding-custom-routes-to-wordpress-rest-api",
+      "permanent": true
+    },
+    {
+      "source": "/2019/10/10/adding-custom-routes-to-wordpress-rest-api/",
+      "destination": "/blog/adding-custom-routes-to-wordpress-rest-api",
+      "permanent": true
+    },
+    {
+      "source": "/2019/11/21/string-interpolation-in-php",
+      "destination": "/blog/string-interpolation-in-php",
+      "permanent": true
+    },
+    {
+      "source": "/2019/11/21/string-interpolation-in-php/",
+      "destination": "/blog/string-interpolation-in-php",
+      "permanent": true
+    },
+    {
+      "source": "/2020/01/24/debugging-in-google-apps-script",
+      "destination": "/blog/debugging-in-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/01/24/debugging-in-google-apps-script/",
+      "destination": "/blog/debugging-in-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/01/27/get-pages-using-a-specific-page-template-in-wordpress",
+      "destination": "/blog/get-pages-using-a-specific-page-template-in-wordpress",
+      "permanent": true
+    },
+    {
+      "source": "/2020/01/27/get-pages-using-a-specific-page-template-in-wordpress/",
+      "destination": "/blog/get-pages-using-a-specific-page-template-in-wordpress",
+      "permanent": true
+    },
+    {
+      "source": "/2020/02/07/es-6-features-for-google-apps-script-template-literals",
+      "destination": "/blog/es-6-features-for-google-apps-script-template-literals",
+      "permanent": true
+    },
+    {
+      "source": "/2020/02/07/es-6-features-for-google-apps-script-template-literals/",
+      "destination": "/blog/es-6-features-for-google-apps-script-template-literals",
+      "permanent": true
+    },
+    {
+      "source": "/2020/02/12/es6-features-for-google-apps-script-arrow-functions",
+      "destination": "/blog/es6-features-for-google-apps-script-arrow-functions",
+      "permanent": true
+    },
+    {
+      "source": "/2020/02/12/es6-features-for-google-apps-script-arrow-functions/",
+      "destination": "/blog/es6-features-for-google-apps-script-arrow-functions",
+      "permanent": true
+    },
+    {
+      "source": "/2020/04/13/using-emoji-in-google-sheets-formulas",
+      "destination": "/blog/using-emoji-in-google-sheets-formulas",
+      "permanent": true
+    },
+    {
+      "source": "/2020/04/13/using-emoji-in-google-sheets-formulas/",
+      "destination": "/blog/using-emoji-in-google-sheets-formulas",
+      "permanent": true
+    },
+    {
+      "source": "/2020/04/24/creating-headless-wordpress-apps-with-vue",
+      "destination": "/blog/creating-headless-wordpress-apps-with-vue",
+      "permanent": true
+    },
+    {
+      "source": "/2020/04/24/creating-headless-wordpress-apps-with-vue/",
+      "destination": "/blog/creating-headless-wordpress-apps-with-vue",
+      "permanent": true
+    },
+    {
+      "source": "/2020/05/09/delegating-client-side-requests-with-google-script-run-in-google-apps-script",
+      "destination": "/blog/delegating-client-side-requests-with-google-script-run-in-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/05/09/delegating-client-side-requests-with-google-script-run-in-google-apps-script/",
+      "destination": "/blog/delegating-client-side-requests-with-google-script-run-in-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/05/18/open-letter-maker-with-google-forms-docs-and-apps-script",
+      "destination": "/blog/open-letter-maker-with-google-forms-docs-and-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/05/18/open-letter-maker-with-google-forms-docs-and-apps-script/",
+      "destination": "/blog/open-letter-maker-with-google-forms-docs-and-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/06/03/lessons-learned-designing-dynamodb-tables-and-queries",
+      "destination": "/blog/lessons-learned-designing-dynamodb-tables-and-queries",
+      "permanent": true
+    },
+    {
+      "source": "/2020/06/03/lessons-learned-designing-dynamodb-tables-and-queries/",
+      "destination": "/blog/lessons-learned-designing-dynamodb-tables-and-queries",
+      "permanent": true
+    },
+    {
+      "source": "/2021/02/09/get-all-users-in-canvas-account-via-api-with-google-apps-script",
+      "destination": "/blog/get-all-users-in-canvas-account-via-api-with-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2021/02/09/get-all-users-in-canvas-account-via-api-with-google-apps-script/",
+      "destination": "/blog/get-all-users-in-canvas-account-via-api-with-google-apps-script",
+      "permanent": true
+    },
+    {
+      "source": "/2020/09/29/auto-fill-a-google-doc-template-from-google-sheet-data",
+      "destination": "/blog/auto-fill-a-google-doc-template-from-google-sheet-data",
+      "permanent": true
+    },
+    {
+      "source": "/2020/09/29/auto-fill-a-google-doc-template-from-google-sheet-data/",
+      "destination": "/blog/auto-fill-a-google-doc-template-from-google-sheet-data",
+      "permanent": true
+    },
+    {
+      "source": "/2020/09/28/javascript-tips-using-named-constants-for-magic-numbers",
+      "destination": "/blog/javascript-tips-using-named-constants-for-magic-numbers",
+      "permanent": true
+    },
+    {
+      "source": "/2020/09/28/javascript-tips-using-named-constants-for-magic-numbers/",
+      "destination": "/blog/javascript-tips-using-named-constants-for-magic-numbers",
+      "permanent": true
+    },
+    {
+      "source": "/2023/02/19/find-replace-text-in-google-doc-with-clickable-link",
+      "destination": "/blog/find-replace-text-in-google-doc-with-clickable-link",
+      "permanent": true
+    },
+    {
+      "source": "/2023/02/19/find-replace-text-in-google-doc-with-clickable-link/",
+      "destination": "/blog/find-replace-text-in-google-doc-with-clickable-link",
+      "permanent": true
+    }
+  ]
+}

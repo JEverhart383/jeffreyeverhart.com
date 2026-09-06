@@ -1,0 +1,15 @@
+{
+  "name": "jeffreyeverhart-com",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "preview": "pnpm --filter web preview",
+    "dev:motion": "pnpm --filter web-motion dev",
+    "build:motion": "pnpm --filter web-motion build"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

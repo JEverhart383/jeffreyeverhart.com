@@ -1,0 +1,51 @@
+---
+import PostLayout from '@/layouts/PostLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const idx = allPosts.findIndex((p) => p.slug === post.slug);
+const prev = allPosts[idx + 1];
+const next = allPosts[idx - 1];
+---
+
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  categories={post.data.categories}
+  heroImage={post.data.heroImage}
+  description={post.data.excerpt}
+>
+  <Content />
+
+  {prev && (
+    <a
+      slot="prev"
+      href={`/blog/${prev.slug}`}
+      class="post-nav-link text-brand-blue hover:text-brand-yellow transition-colors"
+    >
+      &larr; {prev.data.title}
+    </a>
+  )}
+  {next && (
+    <a
+      slot="next"
+      href={`/blog/${next.slug}`}
+      class="post-nav-link text-brand-blue hover:text-brand-yellow transition-colors ml-auto"
+    >
+      {next.data.title} &rarr;
+    </a>
+  )}
+</PostLayout>

@@ -1,0 +1,9 @@
+---
+title: "Soccer = Most Intense Workout Ever/ Screw P90X"
+date: 2011-07-05
+excerpt: "During my childhood, I played about every sport imaginable for at least a few years except one: soccer, or as my amigos hispan0hablantes call it, futbol, or football for you linguistically challenged "
+categories: ["Uncategorized"]
+wpId: 491
+---
+
+During my childhood, I played about every sport imaginable for at least a few years except one: soccer, or as my amigos hispan0hablantes call it, futbol, or football for you linguistically challenged folks. I never imagined that one sport could drain as much of your energy and stamina as quickly as this sport does. As Matt Damon most correctly states in _Dogma_, "Mass genocide is the most exhausting activity one can engage in, outside of soccer." I feel your pain Matt. Until recently, my main sport was Basketball. So, naturally I am finding it difficult to dribble a ball with something other than my hands. I have resorted to taking my shoes off when practicing at home. Hopefully, there will be something to that type of intimacy, my calloused, hobbit like feet striking the leather exterior of ball. My endurance needs some work too. But it is hard to channel high school sports tryouts and the wind sprints that inevitably come along with them. I will try and run with Bandit more, that is as soon as my ankle fully heals. Playing 60 minutes of soccer equals one rolled ankle and two split lips, although I prefer to refer to my split lips as a sign of defensive prowess. Soccer is definitely a TEAM sport, and I cannot emphasize that enough. A good defense means a good offense with more chances to attack the goal, and a precise, well organized offense means a rested and prepared defense. Basically one helps the other from getting run all over, or at least that's the way it should be. Up until now, our offense and defense have been non-existent, but that will all change soon....

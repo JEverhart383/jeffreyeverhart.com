@@ -1,0 +1,41 @@
+---
+import Nav from '@/components/Nav.astro';
+import Footer from '@/components/Footer.astro';
+import ThemeSwitcher from '@/components/ThemeSwitcher.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'The personal blog of Jeff Everhart' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Jeff Everhart" />
+    <meta name="google-site-verification" content="4Rzjb_tE2LibgZFBjx4ITaDOXlS9C_XF42t44Ysoey8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <!-- Prevent flash of wrong theme before CSS loads -->
+    <script is:inline>
+      (function () {
+        var t = localStorage.getItem('je-theme') || 'default';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+  </head>
+  <body id="top" class="bg-gray-50 font-serif text-gray-800 min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <ThemeSwitcher />
+  </body>
+</html>

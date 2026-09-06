@@ -1,0 +1,723 @@
+/* ═══════════════════════════════════════════════════════════
+   THEME SWITCHER STYLES
+   [data-theme] on <html> has specificity [0,1,0] which beats
+   Tailwind utility classes at [0,1,0] — combined selectors
+   like [data-theme] .class win cleanly without !important.
+═══════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────
+   THEME: MINIMAL
+   Cool-gray body, editorial serif hero,
+   white cards that pop against the bg.
+   No browns — blues/neutrals only.
+───────────────────────────────────────── */
+
+[data-theme="minimal"] body {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Nav — clean white bar */
+[data-theme="minimal"] header.site-nav {
+  background: #ffffff;
+  border-bottom-color: #e5e7eb;
+  border-bottom-width: 1px;
+}
+
+[data-theme="minimal"] header.site-nav .brand-logo {
+  color: #1d58a6;
+}
+
+[data-theme="minimal"] header.site-nav nav a,
+[data-theme="minimal"] header.site-nav .social-icons a {
+  color: #4b5563;
+}
+
+[data-theme="minimal"] header.site-nav nav a:hover,
+[data-theme="minimal"] header.site-nav .social-icons a:hover {
+  color: #1d58a6;
+}
+
+[data-theme="minimal"] header.site-nav button {
+  color: #4b5563;
+}
+
+[data-theme="minimal"] #mobile-menu {
+  background: #ffffff;
+  border-top-color: #e5e7eb;
+}
+
+[data-theme="minimal"] #mobile-menu a {
+  color: #4b5563;
+}
+
+/* Hero — light steel-blue tint, big editorial serif */
+[data-theme="minimal"] .hero-section {
+  background: #e8eef8;
+  color: #111827;
+  border-bottom: 1px solid #d1daea;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+[data-theme="minimal"] .hero-section h1 {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+[data-theme="minimal"] .hero-section h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #1d58a6;
+}
+
+/* Hide network SVG — typography carries the hero */
+[data-theme="minimal"] .hero-graphic {
+  display: none;
+}
+
+/* About strip */
+[data-theme="minimal"] .about-strip {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+[data-theme="minimal"] .about-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+[data-theme="minimal"] .about-item-icon {
+  color: #1d58a6;
+}
+
+[data-theme="minimal"] .about-item h3 {
+  color: #111827;
+}
+
+[data-theme="minimal"] .about-item p {
+  color: #6b7280;
+}
+
+/* Blog section */
+[data-theme="minimal"] .blog-section {
+  background: #f3f4f6;
+}
+
+[data-theme="minimal"] .section-title {
+  color: #9ca3af;
+}
+
+/* Cards — white on gray body, natural lift via shadow */
+[data-theme="minimal"] article.post-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="minimal"] article.post-card h2 a {
+  color: #111827;
+}
+
+[data-theme="minimal"] article.post-card h2 a:hover {
+  color: #1d58a6;
+}
+
+[data-theme="minimal"] article.post-card p.post-meta {
+  color: #9ca3af;
+}
+
+[data-theme="minimal"] article.post-card p.post-excerpt {
+  color: #6b7280;
+}
+
+/* Read More — outline style, no filled bg */
+[data-theme="minimal"] a.read-more {
+  background: transparent;
+  color: #1d58a6;
+  border: 1.5px solid #1d58a6;
+  padding: 0.4rem 0.9rem;
+}
+
+[data-theme="minimal"] a.read-more:hover {
+  background: #1d58a6;
+  color: #ffffff;
+}
+
+/* Footer */
+[data-theme="minimal"] footer {
+  background: #ffffff;
+  border-top-color: #e5e7eb;
+}
+
+[data-theme="minimal"] footer a {
+  color: #1d58a6;
+}
+
+/* View all link */
+[data-theme="minimal"] .view-all-link {
+  color: #1d58a6;
+  border-color: #1d58a6;
+}
+
+[data-theme="minimal"] .view-all-link:hover {
+  background: #1d58a6;
+  color: #ffffff;
+}
+
+/* Post pages */
+[data-theme="minimal"] .post-hero {
+  background: #e8eef8;
+  border-bottom: 1px solid #d1daea;
+}
+
+[data-theme="minimal"] .post-hero h1 {
+  color: #111827;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+}
+
+[data-theme="minimal"] .post-hero p {
+  color: #4b5563;
+}
+
+[data-theme="minimal"] .post-content-area {
+  background: #f3f4f6;
+}
+
+[data-theme="minimal"] .post-nav-link {
+  color: #1d58a6;
+}
+
+[data-theme="minimal"] .post-nav-link:hover {
+  color: #111827;
+}
+
+[data-theme="minimal"] .page-hero {
+  background: #e8eef8;
+  border-bottom: 1px solid #d1daea;
+}
+
+[data-theme="minimal"] .page-hero h1 {
+  color: #111827;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+}
+
+
+/* ─────────────────────────────────────────
+   THEME: BLUEPRINT
+   Dark developer aesthetic.
+   Cards get a visible border + shadow so
+   they lift off the near-identical bg.
+───────────────────────────────────────── */
+
+[data-theme="blueprint"] body {
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+/* Nav */
+[data-theme="blueprint"] header.site-nav {
+  background: #0f172a;
+  border-bottom-width: 1px;
+  border-bottom-color: #1e293b;
+}
+
+[data-theme="blueprint"] header.site-nav .brand-logo {
+  color: #06b6d4;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+[data-theme="blueprint"] header.site-nav nav a,
+[data-theme="blueprint"] header.site-nav .social-icons a {
+  color: #94a3b8;
+}
+
+[data-theme="blueprint"] header.site-nav nav a:hover,
+[data-theme="blueprint"] header.site-nav .social-icons a:hover {
+  color: #06b6d4;
+}
+
+[data-theme="blueprint"] header.site-nav button {
+  color: #94a3b8;
+}
+
+[data-theme="blueprint"] #mobile-menu {
+  background: #0f172a;
+  border-top-color: #1e293b;
+}
+
+[data-theme="blueprint"] #mobile-menu a {
+  color: #94a3b8;
+}
+
+/* Hero — dot grid + terminal feel */
+[data-theme="blueprint"] .hero-section {
+  background-color: #0f172a;
+  background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: #e2e8f0;
+}
+
+[data-theme="blueprint"] .hero-section h1 {
+  color: #06b6d4;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+[data-theme="blueprint"] .hero-section h1::before {
+  content: '> ';
+  color: #10b981;
+  font-weight: 700;
+}
+
+[data-theme="blueprint"] .hero-section h2 {
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+[data-theme="blueprint"] .hero-graphic circle {
+  fill: #06b6d4;
+}
+
+[data-theme="blueprint"] .hero-graphic line {
+  stroke: #1e293b;
+}
+
+/* About strip */
+[data-theme="blueprint"] .about-strip {
+  background: #0f172a;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+}
+
+[data-theme="blueprint"] .about-item {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0;
+  /* Visible lift against near-identical bg */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="blueprint"] .about-item-icon {
+  color: #10b981;
+}
+
+[data-theme="blueprint"] .about-item h3 {
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+[data-theme="blueprint"] .about-item p {
+  color: #94a3b8;
+}
+
+/* Blog section */
+[data-theme="blueprint"] .blog-section {
+  background: #0f172a;
+}
+
+[data-theme="blueprint"] .section-title {
+  color: #10b981;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  letter-spacing: 0.15em;
+}
+
+/* Post cards — border + shadow give the accessibility lift */
+[data-theme="blueprint"] article.post-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-left: 3px solid #06b6d4;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="blueprint"] article.post-card h2 a {
+  color: #e2e8f0;
+}
+
+[data-theme="blueprint"] article.post-card h2 a:hover {
+  color: #06b6d4;
+}
+
+[data-theme="blueprint"] article.post-card p.post-meta {
+  color: #10b981;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.7rem;
+}
+
+[data-theme="blueprint"] article.post-card p.post-excerpt {
+  color: #94a3b8;
+}
+
+[data-theme="blueprint"] a.read-more {
+  background: #06b6d4;
+  color: #0f172a;
+}
+
+[data-theme="blueprint"] a.read-more:hover {
+  background: #0891b2;
+  color: #0f172a;
+}
+
+/* Footer */
+[data-theme="blueprint"] footer {
+  background: #0f172a;
+  border-top-color: #1e293b;
+}
+
+[data-theme="blueprint"] footer p {
+  color: #94a3b8;
+}
+
+[data-theme="blueprint"] footer a {
+  color: #06b6d4;
+}
+
+/* View all link */
+[data-theme="blueprint"] .view-all-link {
+  color: #06b6d4;
+  border-color: #06b6d4;
+}
+
+[data-theme="blueprint"] .view-all-link:hover {
+  background: #06b6d4;
+  color: #0f172a;
+}
+
+/* Prose — dark mode readable */
+[data-theme="blueprint"] .prose {
+  color: #94a3b8;
+}
+
+[data-theme="blueprint"] .prose h1,
+[data-theme="blueprint"] .prose h2,
+[data-theme="blueprint"] .prose h3,
+[data-theme="blueprint"] .prose h4 {
+  color: #e2e8f0;
+}
+
+[data-theme="blueprint"] .prose a {
+  color: #06b6d4;
+}
+
+[data-theme="blueprint"] .prose code {
+  background: #1e293b;
+  color: #10b981;
+}
+
+[data-theme="blueprint"] .prose pre {
+  background: #1e293b;
+}
+
+[data-theme="blueprint"] .prose blockquote {
+  border-left-color: #06b6d4;
+  color: #94a3b8;
+}
+
+/* Post pages */
+[data-theme="blueprint"] .post-hero {
+  background-color: #0f172a;
+  background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-theme="blueprint"] .post-hero h1 {
+  color: #e2e8f0;
+}
+
+[data-theme="blueprint"] .post-hero p {
+  color: #94a3b8;
+}
+
+[data-theme="blueprint"] .post-content-area {
+  background: #0f172a;
+}
+
+[data-theme="blueprint"] .post-nav-link {
+  color: #06b6d4;
+}
+
+[data-theme="blueprint"] .post-nav-link:hover {
+  color: #0891b2;
+}
+
+[data-theme="blueprint"] .page-hero {
+  background-color: #0f172a;
+  background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-theme="blueprint"] .page-hero h1 {
+  color: #06b6d4;
+}
+
+
+/* ─────────────────────────────────────────
+   THEME: AURORA
+   Deep indigo-purple dark mode. Distinct
+   from Blueprint (slate-cyan) — warmer,
+   more creative. Gradient hero text gives
+   a cosmic / northern-lights feel.
+───────────────────────────────────────── */
+
+[data-theme="aurora"] body {
+  background: #0d0b1a;
+  color: #c4b5fd;
+}
+
+/* Nav */
+[data-theme="aurora"] header.site-nav {
+  background: #0d0b1a;
+  border-bottom-width: 1px;
+  border-bottom-color: #2d2952;
+}
+
+[data-theme="aurora"] header.site-nav .brand-logo {
+  /* Gradient text on the logo */
+  background: linear-gradient(135deg, #a78bfa, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="aurora"] header.site-nav nav a,
+[data-theme="aurora"] header.site-nav .social-icons a {
+  color: #6d5fa8;
+}
+
+[data-theme="aurora"] header.site-nav nav a:hover,
+[data-theme="aurora"] header.site-nav .social-icons a:hover {
+  color: #a78bfa;
+}
+
+[data-theme="aurora"] header.site-nav button {
+  color: #6d5fa8;
+}
+
+[data-theme="aurora"] #mobile-menu {
+  background: #0d0b1a;
+  border-top-color: #2d2952;
+}
+
+[data-theme="aurora"] #mobile-menu a {
+  color: #6d5fa8;
+}
+
+/* Hero — dot grid, gradient headline text */
+[data-theme="aurora"] .hero-section {
+  background-color: #0d0b1a;
+  background-image: radial-gradient(circle, #2a2050 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: #ede9fe;
+}
+
+[data-theme="aurora"] .hero-section h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
+  line-height: 1.15;
+  /* Aurora gradient on the main heading */
+  background: linear-gradient(135deg, #a78bfa 0%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="aurora"] .hero-section h2 {
+  color: #7c6fad;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Recolor SVG network graphic */
+[data-theme="aurora"] .hero-graphic circle {
+  fill: #7c3aed;
+}
+
+[data-theme="aurora"] .hero-graphic line {
+  stroke: #2a2050;
+}
+
+/* About strip */
+[data-theme="aurora"] .about-strip {
+  background: #0d0b1a;
+  border-top: 1px solid #2d2952;
+  border-bottom: 1px solid #2d2952;
+}
+
+[data-theme="aurora"] .about-item {
+  background: #1a1730;
+  border: 1px solid #2d2952;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="aurora"] .about-item-icon {
+  color: #a78bfa;
+}
+
+[data-theme="aurora"] .about-item h3 {
+  color: #ede9fe;
+}
+
+[data-theme="aurora"] .about-item p {
+  color: #6d5fa8;
+}
+
+/* Blog section */
+[data-theme="aurora"] .blog-section {
+  background: #0d0b1a;
+}
+
+[data-theme="aurora"] .section-title {
+  color: #a78bfa;
+  letter-spacing: 0.15em;
+}
+
+/* Cards — indigo panels, violet left rail, visible border + shadow */
+[data-theme="aurora"] article.post-card {
+  background: #1a1730;
+  border: 1px solid #2d2952;
+  border-left: 3px solid #a78bfa;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="aurora"] article.post-card h2 a {
+  color: #ede9fe;
+}
+
+[data-theme="aurora"] article.post-card h2 a:hover {
+  color: #a78bfa;
+}
+
+[data-theme="aurora"] article.post-card p.post-meta {
+  color: #a78bfa;
+  font-size: 0.7rem;
+}
+
+[data-theme="aurora"] article.post-card p.post-excerpt {
+  color: #6d5fa8;
+}
+
+[data-theme="aurora"] a.read-more {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #ffffff;
+}
+
+[data-theme="aurora"] a.read-more:hover {
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  color: #ffffff;
+}
+
+/* Footer */
+[data-theme="aurora"] footer {
+  background: #0d0b1a;
+  border-top-color: #2d2952;
+}
+
+[data-theme="aurora"] footer p {
+  color: #4a3f72;
+}
+
+[data-theme="aurora"] footer a {
+  color: #a78bfa;
+}
+
+/* View all link */
+[data-theme="aurora"] .view-all-link {
+  color: #a78bfa;
+  border-color: #a78bfa;
+}
+
+[data-theme="aurora"] .view-all-link:hover {
+  background: #a78bfa;
+  color: #0d0b1a;
+}
+
+/* Prose — dark mode readable */
+[data-theme="aurora"] .prose {
+  color: #c4b5fd;
+}
+
+[data-theme="aurora"] .prose h1,
+[data-theme="aurora"] .prose h2,
+[data-theme="aurora"] .prose h3,
+[data-theme="aurora"] .prose h4 {
+  color: #ede9fe;
+}
+
+[data-theme="aurora"] .prose a {
+  color: #a78bfa;
+}
+
+[data-theme="aurora"] .prose code {
+  background: #1a1730;
+  color: #e879f9;
+}
+
+[data-theme="aurora"] .prose pre {
+  background: #1a1730;
+}
+
+[data-theme="aurora"] .prose blockquote {
+  border-left-color: #a78bfa;
+  color: #6d5fa8;
+}
+
+/* Post pages */
+[data-theme="aurora"] .post-hero {
+  background-color: #0d0b1a;
+  background-image: radial-gradient(circle, #2a2050 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-theme="aurora"] .post-hero h1 {
+  color: #ede9fe;
+}
+
+[data-theme="aurora"] .post-hero p {
+  color: #4a3f72;
+}
+
+[data-theme="aurora"] .post-content-area {
+  background: #0d0b1a;
+}
+
+[data-theme="aurora"] .post-nav-link {
+  color: #a78bfa;
+}
+
+[data-theme="aurora"] .post-nav-link:hover {
+  color: #c4b5fd;
+}
+
+[data-theme="aurora"] .page-hero {
+  background-color: #0d0b1a;
+  background-image: radial-gradient(circle, #2a2050 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-theme="aurora"] .page-hero h1 {
+  color: #ede9fe;
+}

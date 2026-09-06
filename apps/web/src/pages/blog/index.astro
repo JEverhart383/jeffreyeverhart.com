@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Blog | Jeff Everhart" description="Articles about web development, JavaScript, and more.">
+  <div class="page-hero bg-brand-light-blue text-white py-12 px-4 text-center">
+    <h1 class="font-sans text-4xl font-bold">Blog</h1>
+  </div>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    {posts.length === 0 ? (
+      <p class="font-serif text-gray-500 text-center">No posts yet. Check back soon.</p>
+    ) : (
+      <div class="space-y-6">
+        {posts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            date={post.data.date}
+            slug={post.slug}
+            excerpt={post.data.excerpt}
+            heroImage={post.data.heroImage}
+            categories={post.data.categories}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

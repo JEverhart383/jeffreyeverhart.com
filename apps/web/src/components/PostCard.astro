@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  date: Date;
+  slug: string;
+  excerpt?: string;
+  heroImage?: string;
+  categories?: string[];
+}
+
+const { title, date, slug, excerpt, heroImage, categories = [] } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article class="post-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden flex flex-row">
+  {heroImage && (
+    <div class="hidden md:block w-36 lg:w-48 shrink-0">
+      <img
+        src={heroImage}
+        alt=""
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  )}
+  <div class="p-4 sm:p-6 flex flex-col justify-between flex-1 min-w-0">
+    <div>
+      <p class="post-meta text-xs text-gray-500 font-sans mb-1">
+        {formattedDate}
+        {categories.length > 0 && <span> &middot; {categories.join(', ')}</span>}
+      </p>
+      <h2 class="text-lg sm:text-xl font-sans font-bold text-gray-900 mb-2">
+        <a href={`/blog/${slug}`} class="hover:text-brand-blue transition-colors">{title}</a>
+      </h2>
+      {excerpt && <p class="post-excerpt font-serif text-gray-600 text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">{excerpt}</p>}
+    </div>
+    <a
+      href={`/blog/${slug}`}
+      class="read-more mt-3 sm:mt-4 inline-block bg-brand-yellow hover:bg-yellow-500 text-gray-900 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors self-start"
+    >
+      Read More
+    </a>
+  </div>
+</article>

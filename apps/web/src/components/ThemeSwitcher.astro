@@ -1,0 +1,87 @@
+---
+const themes = [
+  { id: 'default',   label: 'Original',  color: '#1d58a6' },
+  { id: 'minimal',   label: 'Minimal',   color: '#111111' },
+  { id: 'blueprint', label: 'Blueprint', color: '#06b6d4' },
+  { id: 'aurora',    label: 'Aurora',     color: '#a78bfa' },
+];
+---
+
+<div id="theme-switcher" class="fixed bottom-6 right-6 z-[9999] font-sans select-none">
+  <!-- Panel -->
+  <div id="theme-panel" class="hidden mb-2 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden w-44">
+    <div class="px-3 py-2 border-b border-gray-100 bg-gray-50">
+      <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Theme</p>
+    </div>
+    {themes.map(theme => (
+      <button
+        data-theme-id={theme.id}
+        class="theme-btn flex items-center gap-3 w-full px-4 py-2.5 text-left text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+      >
+        <span
+          class="theme-swatch w-3.5 h-3.5 rounded-full shrink-0 ring-2 ring-transparent ring-offset-1"
+          style={`background:${theme.color}`}
+        ></span>
+        {theme.label}
+      </button>
+    ))}
+  </div>
+
+  <!-- Toggle button -->
+  <button
+    id="theme-toggle"
+    title="Switch theme"
+    class="w-10 h-10 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:scale-110 transition-transform"
+  >
+    <!-- Sun/palette icon -->
+    <svg class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+      <circle cx="12" cy="12" r="4"/>
+      <path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  const KEY = 'je-theme';
+
+  function applyTheme(id: string) {
+    document.documentElement.setAttribute('data-theme', id);
+    localStorage.setItem(KEY, id);
+    updateActive(id);
+  }
+
+  function updateActive(id: string) {
+    document.querySelectorAll<HTMLElement>('.theme-btn').forEach(btn => {
+      const isActive = btn.dataset.themeId === id;
+      btn.style.fontWeight = isActive ? '700' : '';
+      const swatch = btn.querySelector<HTMLElement>('.theme-swatch');
+      if (swatch) {
+        swatch.style.outlineOffset = isActive ? '2px' : '';
+        swatch.style.outline = isActive ? `2px solid ${swatch.style.background}` : '';
+      }
+    });
+  }
+
+  const toggle = document.getElementById('theme-toggle');
+  const panel  = document.getElementById('theme-panel');
+
+  toggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    panel?.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!document.getElementById('theme-switcher')?.contains(e.target as Node)) {
+      panel?.classList.add('hidden');
+    }
+  });
+
+  document.querySelectorAll<HTMLElement>('[data-theme-id]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyTheme(btn.dataset.themeId!);
+      panel?.classList.add('hidden');
+    });
+  });
+
+  updateActive(localStorage.getItem(KEY) || 'default');
+</script>

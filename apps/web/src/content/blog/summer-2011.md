@@ -1,0 +1,9 @@
+---
+title: "Summer 2011"
+date: 2011-06-28
+excerpt: "I have been enjoying spending more time outdoors this summer. Being surrounded by nature though certainly helps, as does having an Australian Shepard that requires frequent walks. I feel a bit like Th"
+categories: ["Uncategorized"]
+wpId: 489
+---
+
+I have been enjoying spending more time outdoors this summer. Being surrounded by nature though certainly helps, as does having an Australian Shepard that requires frequent walks. I feel a bit like Thoreau living out here in the country, waking up to a flock of Turkeys scavenging through my field the other morning. There were three large hens, the Tom was nowhere to be found, and as many as 15 chicks were scurrying beneath their feet. A fox lives somewhere in my back woods as well. I saw him through the kitchen window two weeks ago.The top half of his coat was a light silver color with small wisps of white poking through here and there, while his underbelly was a bright orange. I wondered, as I watched him saunter through my back yard and past my little garden, why he proceeded without an ounce of fear. I deduced that our occupancy was still unknown to him, who more than likely made infrequent hunting trips to stalk the field mice that lived in the tall grass of my field before it was cut in early June. Bandit, my dog, seemed to pay him no mind, much in the same way he ignored the cackling of the Turkey flock that appeared shortly after. My garden, for all of my attempts, seems to be growing slowly at best, and at times, perhaps due to my impatience, it seems not at all. I woke this morning to find my cucumbers plants wilted and one of the squash plants becoming yellow and dry on its under leaves. I watered the entire area thoroughly and decided to give the distressed squash plant another day or so to make a recovery before I pluck him unceremoniously from the earth.
