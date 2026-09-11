@@ -6,9 +6,17 @@ showInNav: false
 
 Here are a few of the more "serious" projects I've worked on over the last year or so. Click through to learn a bit more about the role I played in each project. The lone wolf coder can make great things happen, but working with a great mix of creative, technical, and entrepreneurial people is better.
 
+### [Fingerprint](https://fingerprint.com)
+I'm currently the tech lead for web platform at Fingerprint, where I work between marketing, engineering, and growth to drive traffic, pipeline, and self-serve revenue through ambitious web projects.
+
+
+### [Knock](https://knock.app)
+
+I was the founding developer relations lead at Knock, which started as a typical product/content split of developer advocacy, but ended up working more broadly across the entire marketing and growth function.
+
 ### [WP Engine](https://developers.wpengine.com/docs/)
 
-I'm a member of the dev rel team focused on headless WordPress.  
+I was a member of the dev rel team focused on headless WordPress, but grew into a team lead overseeing the work of other developer advocates.  
 
 ### [VCU Online / ALT Lab](https://online.vcu.edu/)
 
