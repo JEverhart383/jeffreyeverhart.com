@@ -1,0 +1,180 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { published, formatYearRange, formatMonthYear } from '@/lib/collections';
+import { tenure, projectsForOrg, artifactsForOrg, summarizeCounts } from '@/lib/links';
+
+/**
+ * The CV. Orgs are the spine — each one gathers the projects and artifacts done
+ * under it, so filling in an entry's `org` is all it takes to appear here.
+ *
+ * Positions live inside the org because several titles can share one employer;
+ * the org's tenure is the span across all of them.
+ */
+const orgs = (await getCollection('organizations', published))
+  // An org with no positions is a publishing venue, not a job — it has a page,
+  // but it doesn't belong on a CV.
+  .filter((org) => org.data.positions.length > 0)
+  .map((org) => ({ org, span: tenure(org.data.positions) }))
+  .sort((a, b) => {
+    // Freelance always sits below full-time experience, whatever the dates say —
+    // ongoing contract work would otherwise outrank every past staff role.
+    const aFreelance = a.org.data.kind === 'freelance' ? 1 : 0;
+    const bFreelance = b.org.data.kind === 'freelance' ? 1 : 0;
+    if (aFreelance !== bFreelance) return aFreelance - bFreelance;
+
+    // Within each group: current roles first, then most recently ended.
+    const aEnd = a.span.current ? Infinity : (a.span.end?.valueOf() ?? 0);
+    const bEnd = b.span.current ? Infinity : (b.span.end?.valueOf() ?? 0);
+    if (aEnd !== bEnd) return bEnd - aEnd;
+    return (b.span.start?.valueOf() ?? 0) - (a.span.start?.valueOf() ?? 0);
+  });
+
+const entries = await Promise.all(
+  orgs.map(async ({ org, span }) => {
+    const [projects, artifacts] = await Promise.all([
+      projectsForOrg(org.slug),
+      artifactsForOrg(org.slug),
+    ]);
+    const { Content } = await org.render();
+    return { org, span, projects, artifacts, Content };
+  })
+);
+
+/**
+ * The narrative intro still lives in `content/pages/work.md`, so it stays
+ * editable as prose. Once the org entries above are filled in and published,
+ * that file can be trimmed to just its opening paragraph.
+ */
+const intro = await getEntry('pages', 'work');
+const Intro = intro ? (await intro.render()).Content : null;
+
+const sections = [
+  { label: 'Projects', href: '/work/projects', blurb: 'Larger initiatives' },
+  { label: 'Videos', href: '/work/videos', blurb: 'Screencasts and talks on camera' },
+  { label: 'Writing Elsewhere', href: '/work/writing', blurb: 'Guest posts and docs' },
+  { label: 'Talks & Appearances', href: '/work/talks', blurb: 'Podcasts, conferences, panels' },
+  { label: '3D Models', href: '/work/models', blurb: 'Parametric and printed' },
+  { label: 'Builds', href: '/work/builds', blurb: 'Woodworking and microcontrollers' },
+];
+
+
+---
+
+<BaseLayout
+  title="Work | Jeff Everhart"
+  description="Where I've worked, what I built there, and everything that came out of it."
+>
+  <div class="page-hero bg-brand-light-blue text-white py-12 px-4 text-center">
+    <h1 class="font-sans text-4xl font-bold">Work</h1>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    {Intro && (
+      <div class="prose prose-lg max-w-none font-serif mb-12">
+        <Intro />
+      </div>
+    )}
+
+    <!-- Jump links into each collection -->
+    <nav class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-14">
+      {sections.map((section) => (
+        <a
+          href={section.href}
+          class="block bg-white border border-gray-100 rounded-lg p-4 hover:border-brand-blue transition-colors"
+        >
+          <span class="font-sans font-bold text-gray-900 text-sm">{section.label}</span>
+          <span class="block font-serif text-gray-500 text-xs mt-0.5">{section.blurb}</span>
+        </a>
+      ))}
+    </nav>
+
+    {entries.length > 0 && (
+      <section>
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-8">
+          Experience
+        </h2>
+
+        <div class="space-y-12">
+          {entries.map(({ org, span, projects, artifacts, Content }) => (
+            <article class="cv-entry">
+              <header class="mb-3">
+                <h3 class="font-sans text-xl font-bold text-gray-900">
+                  <a href={`/work/orgs/${org.slug}`} class="hover:text-brand-blue transition-colors">
+                    {org.data.name}
+                  </a>
+                </h3>
+                <p class="font-sans text-xs text-gray-500 mt-0.5">
+                  {formatYearRange(span.start!, span.end, span.current)}
+                  {org.data.location && <span> &middot; {org.data.location}</span>}
+                </p>
+              </header>
+
+              {/* Several titles at one employer read as a promotion track. */}
+              <ul class="mb-4 space-y-1">
+                {org.data.positions.map((position) => (
+                  <li class="font-sans text-sm text-gray-700">
+                    <div class="flex flex-wrap gap-x-2">
+                      <span class="font-semibold">{position.title}</span>
+                      <span class="text-gray-400 text-xs self-center">
+                        {`${formatMonthYear(position.startDate)} – ${
+                          position.endDate ? formatMonthYear(position.endDate) : 'present'
+                        }`}
+                      </span>
+                    </div>
+                    {position.summary && (
+                      <p class="font-serif text-xs text-gray-500 mt-0.5">{position.summary}</p>
+                    )}
+                  </li>
+                ))}
+              </ul>
+
+              {/*
+                The CV shows highlights; the full body lives on the org's page.
+                Orgs with no highlights yet fall back to the body so nothing
+                renders empty — adding them is what keeps this page skimmable.
+              */}
+              {org.data.highlights.length > 0 ? (
+                <ul class="list-disc pl-5 space-y-1.5 font-serif text-sm text-gray-600 marker:text-gray-300">
+                  {org.data.highlights.map((highlight) => (
+                    <li class="leading-relaxed">{highlight}</li>
+                  ))}
+                </ul>
+              ) : (
+                <div class="prose max-w-none font-serif text-sm">
+                  <Content />
+                </div>
+              )}
+
+              {projects.length > 0 && (
+                <ul class="mt-4 space-y-1">
+                  {projects.map((project) => (
+                    <li class="font-serif text-sm">
+                      <a
+                        href={`/work/projects/${project.slug}`}
+                        class="text-brand-blue hover:text-brand-yellow transition-colors"
+                      >
+                        {project.data.title}
+                      </a>
+                      {project.data.role && (
+                        <span class="text-gray-500 text-xs font-sans"> &middot; {project.data.role}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {artifacts.length > 0 && (
+                <p class="mt-3 font-sans text-xs text-gray-500">
+                  <a href={`/work/orgs/${org.slug}`} class="hover:text-brand-blue transition-colors">
+                    {summarizeCounts(artifacts)} &rarr;
+                  </a>
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>

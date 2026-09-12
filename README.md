@@ -10,6 +10,7 @@ Source for [jeffreyeverhart.com](https://jeffreyeverhart.com), a pnpm monorepo.
 ## Other
 
 - **`scripts`** — one-off tooling used to migrate content off WordPress (`migrate-wp.js` converts the WordPress export XML into the markdown under `apps/web/src/content`).
+- **`archive`** — captured copies of published work, so link rot doesn't lose it. Deliberately outside `apps/web/src`, so it's never part of the site build. See `archive/README.md`.
 
 ## Development
 

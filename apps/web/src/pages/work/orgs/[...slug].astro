@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import RelatedWork from '@/components/RelatedWork.astro';
+import { getCollection } from 'astro:content';
+import { published, formatYearRange, formatMonthYear, yearOf } from '@/lib/collections';
+import { tenure, projectsForOrg, artifactsForOrg } from '@/lib/links';
+
+export async function getStaticPaths() {
+  const orgs = await getCollection('organizations', published);
+  return orgs.map((org) => ({
+    params: { slug: org.slug },
+    props: { org },
+  }));
+}
+
+const { org } = Astro.props;
+const { Content } = await org.render();
+const { name, kind, url, location, positions } = org.data;
+
+const span = tenure(positions);
+const projects = await projectsForOrg(org.slug);
+// Includes anything filed under one of this org's projects, not just entries
+// that named the org directly.
+const artifacts = await artifactsForOrg(org.slug);
+
+const kindLabels: Record<string, string> = {
+  company: 'Company',
+  university: 'University',
+  nonprofit: 'Nonprofit',
+  client: 'Client',
+  freelance: 'Freelance',
+  publication: 'Publication',
+};
+
+
+---
+
+<BaseLayout title={`${name} | Jeff Everhart`} description={`Work done with ${name}.`}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <p class="text-xs text-gray-500 font-sans mb-2">
+      <a href="/work" class="text-brand-blue hover:text-brand-yellow transition-colors">Work</a>
+      <span> &middot; {kindLabels[kind] ?? kind}</span>
+      {span.start && <span> &middot; {formatYearRange(span.start, span.end, span.current)}</span>}
+      {location && <span> &middot; {location}</span>}
+    </p>
+
+    <h1 class="font-sans text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{name}</h1>
+
+    {positions.length > 0 && (
+      <ul class="mb-6 space-y-1">
+        {positions.map((position) => (
+          <li class="font-sans text-sm text-gray-700">
+            <div class="flex flex-wrap gap-x-2">
+              <span class="font-semibold">{position.title}</span>
+              <span class="text-gray-400 text-xs self-center">
+                {`${formatMonthYear(position.startDate)} – ${
+                  position.endDate ? formatMonthYear(position.endDate) : 'present'
+                }`}
+              </span>
+            </div>
+            {position.summary && (
+              <p class="font-serif text-xs text-gray-500 mt-0.5">{position.summary}</p>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {/* `highlights` are deliberately not rendered here — they're the CV's
+        compressed claims, and this page tells the longer story in the body. */}
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+
+    {projects.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Projects
+        </h2>
+        <ul class="space-y-1.5">
+          {projects.map((project) => (
+            <li class="flex items-baseline gap-2 font-serif text-sm">
+              <span class="text-gray-400 font-sans text-xs tabular-nums shrink-0">
+                {yearOf(project.data.date)}
+              </span>
+              <a
+                href={`/work/projects/${project.slug}`}
+                class="text-brand-blue hover:text-brand-yellow transition-colors"
+              >
+                {project.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <RelatedWork links={artifacts} heading="Everything else" />
+
+    {url && (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-10 inline-block border border-gray-300 hover:border-brand-blue text-gray-700 hover:text-brand-blue font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+      >
+        Visit {name}<span aria-hidden="true"> &nearr;</span>
+      </a>
+    )}
+  </article>
+</BaseLayout>

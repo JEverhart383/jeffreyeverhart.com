@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MediaCard from '@/components/MediaCard.astro';
+import { getCollection } from 'astro:content';
+import { published, byDateDesc, youtubeThumbnail, formatDuration, hasBody } from '@/lib/collections';
+import { orgResolver } from '@/lib/links';
+
+const videos = (await getCollection('videos', published)).sort(byDateDesc);
+const orgs = await orgResolver();
+
+// The distinction worth surfacing: what you made for yourself vs. what you were
+// commissioned to make. `org` is the discriminator.
+const ownChannel = videos.filter((v) => !v.data.org);
+const forOthers = videos.filter((v) => v.data.org);
+
+const sections = [
+  { heading: 'On my channel', items: ownChannel },
+  { heading: 'Made for other teams', items: forOthers },
+].filter((section) => section.items.length > 0);
+
+/** Entries with a body get a page here; the rest link straight to the platform. */
+function destination(video: (typeof videos)[number]) {
+  return hasBody(video)
+    ? { href: `/work/videos/${video.slug}`, external: false, cta: 'Watch' }
+    : { href: video.data.url, external: true, cta: 'Watch' };
+}
+---
+
+<BaseLayout
+  title="Videos | Jeff Everhart"
+  description="Videos and screencasts about web development, made for my own channel and for other teams."
+>
+  <div class="page-hero bg-brand-light-blue text-white py-12 px-4 text-center">
+    <h1 class="font-sans text-4xl font-bold">Videos</h1>
+  </div>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    {sections.length === 0 ? (
+      <p class="font-serif text-gray-500 text-center">No videos yet.</p>
+    ) : (
+      sections.map((section) => (
+        <div class="mb-12 last:mb-0">
+          <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-6">
+            {section.heading}
+          </h2>
+          <div class="space-y-6">
+            {section.items.map((video) => (
+              <MediaCard
+                title={video.data.title}
+                date={video.data.date}
+                summary={video.data.summary}
+                image={
+                  video.data.image ??
+                  (video.data.videoId ? youtubeThumbnail(video.data.videoId) : undefined)
+                }
+                meta={[video.data.publisher ?? orgs.name(video.data.org), video.data.series].filter(Boolean).join(' · ') || undefined}
+                badge={
+                  video.data.durationSeconds
+                    ? formatDuration(video.data.durationSeconds)
+                    : undefined
+                }
+                {...destination(video)}
+              />
+            ))}
+          </div>
+        </div>
+      ))
+    )}
+  </section>
+</BaseLayout>

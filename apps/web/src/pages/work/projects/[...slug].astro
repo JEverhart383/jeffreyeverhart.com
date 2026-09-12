@@ -1,0 +1,148 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { published, formatYearRange } from '@/lib/collections';
+import { orgResolver, artifactsForProject } from '@/lib/links';
+import RelatedWork from '@/components/RelatedWork.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', published);
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+const {
+  title,
+  date,
+  endDate,
+  summary,
+  status,
+  role,
+  org,
+  tech,
+  collaborators,
+  url,
+  repoUrl,
+  links,
+  heroImage,
+  images,
+  archive,
+} = project.data;
+
+const statusLabels: Record<string, string> = {
+  active: 'Active',
+  completed: 'Completed',
+  maintained: 'Maintained',
+  archived: 'Archived',
+};
+
+const orgs = await orgResolver();
+const orgName = orgs.name(org);
+const orgHref = orgs.href(org);
+
+// Computed, not authored: everything whose frontmatter names this project.
+const related = await artifactsForProject(project.slug);
+
+const years = formatYearRange(date, endDate, status === 'active');
+const hero = heroImage ?? images[0];
+const gallery = images.filter((src) => src !== hero);
+
+// The live site may be gone even though the project happened.
+const isDead = archive?.linkStatus === 'dead';
+
+const outboundLinks = [
+  ...(url && !isDead ? [{ label: 'Visit the site', href: url, primary: true }] : []),
+  ...(repoUrl ? [{ label: 'Source', href: repoUrl, primary: false }] : []),
+  ...links.map((link) => ({ ...link, primary: false })),
+];
+---
+
+<BaseLayout title={`${title} | Jeff Everhart`} description={summary}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <p class="text-xs text-gray-500 font-sans mb-2">
+      <a href="/work/projects" class="text-brand-blue hover:text-brand-yellow transition-colors">Projects</a>
+      <span> &middot; {years}</span>
+      <span> &middot; {statusLabels[status]}</span>
+      {orgName && orgHref && (
+        <span> &middot; <a href={orgHref} class="text-brand-blue hover:text-brand-yellow transition-colors">{orgName}</a></span>
+      )}
+    </p>
+
+    <h1 class="font-sans text-3xl sm:text-4xl font-bold text-gray-900 mb-3">{title}</h1>
+
+    {role && <p class="font-sans text-base text-gray-600 mb-6">{role}</p>}
+
+    {hero && <img src={hero} alt="" class="w-full rounded-lg border border-gray-100 mb-8" />}
+
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+
+    {tech.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Built with
+        </h2>
+        <ul class="flex flex-wrap gap-2">
+          {tech.map((item) => (
+            <li class="bg-gray-100 text-gray-700 font-sans text-xs px-2.5 py-1 rounded">{item}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {collaborators.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Worked with
+        </h2>
+        <p class="font-serif text-gray-600 text-sm">{collaborators.join(', ')}</p>
+      </section>
+    )}
+
+    <RelatedWork links={related} heading="From this project" />
+
+    {gallery.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          More views
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {gallery.map((src) => (
+            <img src={src} alt="" loading="lazy" class="w-full rounded-lg border border-gray-100" />
+          ))}
+        </div>
+      </section>
+    )}
+
+    {outboundLinks.length > 0 && (
+      <section class="mt-10 flex flex-wrap gap-3">
+        {outboundLinks.map(({ label, href, primary }) => (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class:list={[
+              'inline-block font-sans font-semibold text-sm px-4 py-2 rounded transition-colors',
+              primary
+                ? 'bg-brand-yellow hover:bg-yellow-500 text-gray-900'
+                : 'border border-gray-300 hover:border-brand-blue text-gray-700 hover:text-brand-blue',
+            ]}
+          >
+            {label}<span aria-hidden="true"> &nearr;</span>
+          </a>
+        ))}
+      </section>
+    )}
+
+    {isDead && (
+      <p class="mt-10 font-sans text-sm text-gray-500 italic">
+        This project is no longer online. A copy is kept in the archive.
+      </p>
+    )}
+  </article>
+</BaseLayout>

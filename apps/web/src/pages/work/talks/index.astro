@@ -1,0 +1,91 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MediaCard from '@/components/MediaCard.astro';
+import { getCollection } from 'astro:content';
+import { published, byDateDesc, youtubeThumbnail, formatDuration, hasBody } from '@/lib/collections';
+
+const talks = (await getCollection('talks', published)).sort(byDateDesc);
+
+const formatLabels: Record<string, string> = {
+  podcast: 'Podcast',
+  conference: 'Conference',
+  meetup: 'Meetup',
+  webinar: 'Webinar',
+  panel: 'Panel',
+  livestream: 'Livestream',
+  interview: 'Interview',
+};
+
+/**
+ * A talk can carry several links. Prefer the canonical one, then the recording,
+ * then the slides — some talks were never recorded and have only slides.
+ */
+function primaryLink(data: (typeof talks)[number]['data']) {
+  if (data.url) return { href: data.url, cta: data.format === 'podcast' ? 'Listen' : 'Watch' };
+  if (data.recordingUrl) return { href: data.recordingUrl, cta: 'Watch' };
+  if (data.slidesUrl) return { href: data.slidesUrl, cta: 'Slides' };
+  return { href: undefined, cta: undefined };
+}
+
+/** Entries with a body get a page here; the rest link straight to the venue. */
+function destination(talk: (typeof talks)[number]) {
+  if (hasBody(talk)) {
+    return {
+      href: `/work/talks/${talk.slug}`,
+      external: false,
+      cta: talk.data.format === 'podcast' ? 'Listen' : 'Watch',
+    };
+  }
+  return { ...primaryLink(talk.data), external: true };
+}
+---
+
+<BaseLayout
+  title="Talks & Appearances | Jeff Everhart"
+  description="Podcast appearances, conference talks, webinars, and panels."
+>
+  <div class="page-hero bg-brand-light-blue text-white py-12 px-4 text-center">
+    <h1 class="font-sans text-4xl font-bold">Talks &amp; Appearances</h1>
+  </div>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    {talks.length === 0 ? (
+      <p class="font-serif text-gray-500 text-center">Nothing here yet.</p>
+    ) : (
+      <div class="space-y-6">
+        {talks.map((talk) => {
+          const { href, external, cta } = destination(talk);
+          const formatLabel = formatLabels[talk.data.format] ?? talk.data.format;
+          const duration = talk.data.durationSeconds
+            ? formatDuration(talk.data.durationSeconds)
+            : undefined;
+
+          // The badge shows a runtime when there is one, so the format label
+          // moves into the meta line rather than being dropped.
+          const meta = [talk.data.venue, talk.data.episode, talk.data.location]
+            .concat(duration ? [formatLabel] : [])
+            .filter(Boolean)
+            .join(' · ');
+
+          return (
+            <MediaCard
+              title={talk.data.title}
+              date={talk.data.date}
+              summary={talk.data.summary}
+              image={
+                talk.data.image ??
+                (talk.data.videoId ? youtubeThumbnail(talk.data.videoId) : undefined)
+              }
+              meta={meta}
+              badge={duration ?? formatLabel}
+              href={href}
+              external={external}
+              cta={cta}
+              dead={talk.data.archive?.linkStatus === 'dead'}
+            />
+          );
+        })}
+      </div>
+    )}
+  </section>
+</BaseLayout>

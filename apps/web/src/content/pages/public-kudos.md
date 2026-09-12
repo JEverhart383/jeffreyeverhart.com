@@ -1,7 +1,6 @@
 ---
 title: "Public Kudos"
 wpId: 2349
-showInNav: false
 ---
 
 Thanks a lot for reaching out to me regarding your current project. When I started to learn how to code over 10 years ago, I quickly became amazed at the helpful things I could build for people.

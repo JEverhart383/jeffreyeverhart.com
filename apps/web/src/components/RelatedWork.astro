@@ -1,0 +1,58 @@
+---
+import { yearOf } from '@/lib/collections';
+import type { ArtifactLink, ArtifactCollection } from '@/lib/links';
+import { ARTIFACT_COLLECTIONS } from '@/lib/links';
+
+interface Props {
+  links: ArtifactLink[];
+  heading?: string;
+}
+
+const { links, heading = 'Related work' } = Astro.props;
+
+const groupLabels: Record<ArtifactCollection, string> = {
+  videos: 'Videos',
+  writing: 'Writing',
+  talks: 'Talks',
+  models: '3D Models',
+  builds: 'Builds',
+};
+
+// Group in a fixed order so the section reads the same on every page.
+const groups = ARTIFACT_COLLECTIONS.map((collection) => ({
+  collection,
+  label: groupLabels[collection],
+  items: links.filter((link) => link.collection === collection),
+})).filter((group) => group.items.length > 0);
+---
+
+{groups.length > 0 && (
+  <section class="mt-10">
+    <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+      {heading}
+    </h2>
+    <div class="space-y-5">
+      {groups.map((group) => (
+        <div>
+          <h3 class="font-sans text-sm font-semibold text-gray-700 mb-2">{group.label}</h3>
+          <ul class="space-y-1.5">
+            {group.items.map((item) => (
+              <li class="flex items-baseline gap-2 font-serif text-sm">
+                <span class="text-gray-400 font-sans text-xs tabular-nums shrink-0">
+                  {yearOf(item.date)}
+                </span>
+                <a
+                  href={item.href}
+                  {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  class="text-brand-blue hover:text-brand-yellow transition-colors"
+                >
+                  {item.title}{item.external && <span aria-hidden="true"> &nearr;</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+)}

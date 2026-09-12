@@ -1,7 +1,6 @@
 ---
 title: "Contact"
 wpId: 2262
-showInNav: false
 ---
 
 ### Let's Chat

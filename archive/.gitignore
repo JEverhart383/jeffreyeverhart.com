@@ -1,0 +1,18 @@
+# Keep the archive greppable and the repo cloneable: text and small images are
+# committed, heavy binaries are not. Note where the big files actually live in
+# the capture's meta.json.
+
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.m4a
+*.zip
+*.stl
+*.3mf
+*.blend
+*.blend[0-9]*
+*.FCStd
+*.FCStd[0-9]*

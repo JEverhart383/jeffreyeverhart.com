@@ -3,11 +3,17 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
+  // Astro hoists getStaticPaths into its own scope, so this lives inside.
+  // `work` has its own route now — the CV, which uses work.md as its intro.
+  const routedElsewhere = new Set(['work']);
+
   const pages = await getCollection('pages', ({ data }) => !data.draft);
-  return pages.map((page) => ({
-    params: { slug: page.slug },
-    props: { page },
-  }));
+  return pages
+    .filter((page) => !routedElsewhere.has(page.slug))
+    .map((page) => ({
+      params: { slug: page.slug },
+      props: { page },
+    }));
 }
 
 const { page } = Astro.props;

@@ -1,0 +1,128 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { published, formatDate, hasBody } from '@/lib/collections';
+import { orgResolver } from '@/lib/links';
+
+export async function getStaticPaths() {
+  // Same rule as videos: only talks with commentary need a page of their own.
+  // An appearance that's just a link to someone else's site stays a link.
+  const talks = (await getCollection('talks', published)).filter(
+    hasBody
+  );
+
+  return talks.map((talk) => ({
+    params: { slug: talk.slug },
+    props: { talk },
+  }));
+}
+
+const FORMAT_LABELS: Record<string, string> = {
+  podcast: 'Podcast',
+  conference: 'Conference',
+  meetup: 'Meetup',
+  webinar: 'Webinar',
+  panel: 'Panel',
+  livestream: 'Livestream',
+  interview: 'Interview',
+};
+
+const { talk } = Astro.props;
+const { Content } = await talk.render();
+const {
+  title,
+  date,
+  summary,
+  format,
+  venue,
+  episode,
+  location,
+  url,
+  slidesUrl,
+  recordingUrl,
+  hosts,
+  videoId,
+  org,
+  archive,
+} = talk.data;
+
+const orgs = await orgResolver();
+const orgName = orgs.name(org);
+const orgHref = orgs.href(org);
+
+const formattedDate = formatDate(date);
+const isDead = archive?.linkStatus === 'dead';
+
+const watchUrl = url ?? recordingUrl;
+const watchLabel = format === 'podcast' ? 'Listen' : 'Watch';
+---
+
+<BaseLayout title={`${title} | Jeff Everhart`} description={summary}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <p class="text-xs text-gray-500 font-sans mb-2">
+      <a href="/work/talks" class="text-brand-blue hover:text-brand-yellow transition-colors">Talks</a>
+      <span> &middot; {formattedDate}</span>
+      <span> &middot; {FORMAT_LABELS[format] ?? format}</span>
+      <span> &middot; {venue}</span>
+      {episode && <span> &middot; {episode}</span>}
+      {location && <span> &middot; {location}</span>}
+      {orgName && orgHref && (
+        <span> &middot; <a href={orgHref} class="text-brand-blue hover:text-brand-yellow transition-colors">{orgName}</a></span>
+      )}
+    </p>
+
+    <h1 class="font-sans text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{title}</h1>
+
+    {videoId && !isDead && (
+      <div class="aspect-video mb-8 rounded-lg overflow-hidden bg-black">
+        <iframe
+          class="w-full h-full"
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          title={title}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    )}
+
+    {hosts.length > 0 && (
+      <p class="font-sans text-sm text-gray-500 mb-6">
+        With {hosts.join(', ')}
+      </p>
+    )}
+
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+
+    {isDead ? (
+      <p class="mt-8 font-sans text-sm text-gray-500 italic">
+        The original is no longer online. A copy is kept in the archive.
+      </p>
+    ) : (
+      <div class="mt-8 flex flex-wrap gap-3">
+        {watchUrl && (
+          <a
+            href={watchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-brand-yellow hover:bg-yellow-500 text-gray-900 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+          >
+            {watchLabel} on {venue}<span aria-hidden="true"> &nearr;</span>
+          </a>
+        )}
+        {slidesUrl && (
+          <a
+            href={slidesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block border border-gray-300 hover:border-gray-400 text-gray-700 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+          >
+            Slides<span aria-hidden="true"> &nearr;</span>
+          </a>
+        )}
+      </div>
+    )}
+  </article>
+</BaseLayout>

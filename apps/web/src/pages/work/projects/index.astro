@@ -1,0 +1,71 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MediaCard from '@/components/MediaCard.astro';
+import { getCollection } from 'astro:content';
+import { published, byDateDesc, formatYearRange } from '@/lib/collections';
+import { orgResolver } from '@/lib/links';
+
+const projects = (await getCollection('projects', published)).sort(byDateDesc);
+const orgs = await orgResolver();
+
+const statusLabels: Record<string, string> = {
+  active: 'Active',
+  completed: 'Completed',
+  maintained: 'Maintained',
+  archived: 'Archived',
+};
+
+// Things still going get their own section — it's the first question anyone has.
+const ongoing = projects.filter((p) => p.data.status === 'active');
+const past = projects.filter((p) => p.data.status !== 'active');
+
+const sections = [
+  { heading: 'Ongoing', items: ongoing },
+  { heading: 'Past', items: past },
+].filter((section) => section.items.length > 0);
+---
+
+<BaseLayout
+  title="Projects | Jeff Everhart"
+  description="Larger initiatives — the projects behind the posts, videos, and talks."
+>
+  <div class="page-hero bg-brand-light-blue text-white py-12 px-4 text-center">
+    <h1 class="font-sans text-4xl font-bold">Projects</h1>
+    <p class="font-serif text-sm mt-2 opacity-90">
+      Bigger efforts that don't fit in a single post or video.
+    </p>
+  </div>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    {sections.length === 0 ? (
+      <p class="font-serif text-gray-500 text-center">No projects yet.</p>
+    ) : (
+      sections.map((section) => (
+        <div class="mb-12 last:mb-0">
+          <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-6">
+            {section.heading}
+          </h2>
+          <div class="space-y-6">
+            {section.items.map((project) => (
+              <MediaCard
+                title={project.data.title}
+                date={project.data.date}
+                summary={project.data.summary}
+                image={project.data.heroImage ?? project.data.images[0]}
+                dateLabel={formatYearRange(
+                  project.data.date,
+                  project.data.endDate,
+                  project.data.status === 'active'
+                )}
+                meta={[orgs.name(project.data.org), project.data.role].filter(Boolean).join(' · ') || undefined}
+                badge={statusLabels[project.data.status]}
+                href={`/work/projects/${project.slug}`}
+                cta="View project"
+              />
+            ))}
+          </div>
+        </div>
+      ))
+    )}
+  </section>
+</BaseLayout>

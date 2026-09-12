@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MediaCard from '@/components/MediaCard.astro';
+import { getCollection } from 'astro:content';
+import { published, byDateDesc } from '@/lib/collections';
+import { orgResolver } from '@/lib/links';
+
+const articles = (await getCollection('writing', published)).sort(byDateDesc);
+const orgs = await orgResolver();
+
+const kindLabels: Record<string, string> = {
+  'guest-post': 'Guest post',
+  article: 'Article',
+  documentation: 'Documentation',
+  newsletter: 'Newsletter',
+  whitepaper: 'Whitepaper',
+};
+---
+
+<BaseLayout
+  title="Writing Elsewhere | Jeff Everhart"
+  description="Guest posts, documentation, and articles I've written for other publications."
+>
+  <div class="page-hero bg-brand-light-blue text-white py-12 px-4 text-center">
+    <h1 class="font-sans text-4xl font-bold">Writing Elsewhere</h1>
+    <p class="font-serif text-sm mt-2 opacity-90">
+      Work published on other people's sites. My own posts live on the <a href="/blog" class="underline">blog</a>.
+    </p>
+  </div>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    {articles.length === 0 ? (
+      <p class="font-serif text-gray-500 text-center">Nothing here yet.</p>
+    ) : (
+      <div class="space-y-6">
+        {articles.map((article) => (
+          <MediaCard
+            title={article.data.title}
+            date={article.data.date}
+            summary={article.data.summary}
+            image={article.data.image}
+            meta={article.data.publisher ?? orgs.name(article.data.org)}
+            badge={kindLabels[article.data.kind] ?? article.data.kind}
+            href={article.data.url}
+            external={true}
+            cta="Read"
+            dead={article.data.archive?.linkStatus === 'dead'}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

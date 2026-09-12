@@ -1,4 +1,5 @@
 ---
+import { formatDate } from '@/lib/collections';
 interface Props {
   title: string;
   date: Date;
@@ -10,22 +11,20 @@ interface Props {
 
 const { title, date, slug, excerpt, heroImage, categories = [] } = Astro.props;
 
-const formattedDate = date.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const formattedDate = formatDate(date);
 ---
 
 <article class="post-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden flex flex-row">
   {heroImage && (
-    <div class="hidden md:block w-36 lg:w-48 shrink-0">
-      <img
-        src={heroImage}
-        alt=""
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
+    <div class="hidden md:flex items-center w-36 lg:w-48 shrink-0 bg-gray-50">
+      <div class="relative w-full aspect-video">
+        <img
+          src={heroImage}
+          alt=""
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
     </div>
   )}
   <div class="p-4 sm:p-6 flex flex-col justify-between flex-1 min-w-0">

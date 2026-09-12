@@ -1,0 +1,140 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { published, formatDate } from '@/lib/collections';
+
+export async function getStaticPaths() {
+  const models = await getCollection('models', published);
+  return models.map((model) => ({
+    params: { slug: model.slug },
+    props: { model },
+  }));
+}
+
+const { model } = Astro.props;
+const { Content } = await model.render();
+const {
+  title,
+  date,
+  summary,
+  tools,
+  heroImage,
+  images,
+  sourceUrl,
+  downloads,
+  license,
+  printSettings,
+  status,
+} = model.data;
+
+const toolLabels: Record<string, string> = {
+  blender: 'Blender',
+  freecad: 'FreeCAD',
+  openscad: 'OpenSCAD',
+  fusion360: 'Fusion 360',
+  tinkercad: 'Tinkercad',
+  other: 'Other',
+};
+
+const formattedDate = formatDate(date);
+
+const hero = heroImage ?? images[0];
+// Whichever image is the hero shouldn't repeat in the gallery below it.
+const gallery = images.filter((src) => src !== hero);
+
+const printRows = printSettings
+  ? [
+      ['Material', printSettings.material],
+      ['Layer height', printSettings.layerHeight],
+      ['Infill', printSettings.infill],
+      ['Supports', printSettings.supports === undefined ? undefined : printSettings.supports ? 'Yes' : 'No'],
+      [
+        'Print time',
+        printSettings.printTimeMinutes === undefined
+          ? undefined
+          : `${Math.floor(printSettings.printTimeMinutes / 60)}h ${printSettings.printTimeMinutes % 60}m`,
+      ],
+    ].filter((row): row is [string, string] => row[1] !== undefined)
+  : [];
+---
+
+<BaseLayout title={`${title} | Jeff Everhart`} description={summary}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <p class="text-xs text-gray-500 font-sans mb-2">
+      <a href="/work/models" class="text-brand-blue hover:text-brand-yellow transition-colors">3D Models</a>
+      <span> &middot; {formattedDate}</span>
+      {tools.length > 0 && <span> &middot; {tools.map((t) => toolLabels[t] ?? t).join(', ')}</span>}
+      {status !== 'published' && <span> &middot; {status.replace('-', ' ')}</span>}
+    </p>
+
+    <h1 class="font-sans text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{title}</h1>
+
+    {hero && (
+      <img src={hero} alt="" class="w-full rounded-lg border border-gray-100 mb-8" />
+    )}
+
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+
+    {printRows.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Print settings
+        </h2>
+        <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 font-sans text-sm">
+          {printRows.map(([label, value]) => (
+            <div class="flex justify-between border-b border-gray-100 py-1.5">
+              <dt class="text-gray-500">{label}</dt>
+              <dd class="text-gray-900 font-medium">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {gallery.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          More views
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {gallery.map((src) => (
+            <img src={src} alt="" loading="lazy" class="w-full rounded-lg border border-gray-100" />
+          ))}
+        </div>
+      </section>
+    )}
+
+    {(downloads.length > 0 || sourceUrl) && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Files
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          {downloads.map(({ label, href }) => (
+            <a
+              href={href}
+              class="inline-block bg-brand-yellow hover:bg-yellow-500 text-gray-900 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+          {sourceUrl && (
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block border border-gray-300 hover:border-brand-blue text-gray-700 hover:text-brand-blue font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+            >
+              View listing<span aria-hidden="true"> &nearr;</span>
+            </a>
+          )}
+        </div>
+        {license && (
+          <p class="mt-4 font-sans text-xs text-gray-500">Licensed under {license}.</p>
+        )}
+      </section>
+    )}
+  </article>
+</BaseLayout>

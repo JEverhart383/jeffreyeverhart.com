@@ -300,7 +300,7 @@ async function main() {
   console.log(`Redirects: ${VERCEL_CONFIG}`);
   console.log('\nNext steps:');
   console.log('  1. Review the generated .md files for formatting issues');
-  console.log('  2. Set showInNav: true in any page frontmatter you want in the nav');
+  console.log('  2. Add any new pages to navLinks in apps/web/src/config/nav.ts');
   console.log('  3. Run: pnpm build');
 }
 

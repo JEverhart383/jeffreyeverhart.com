@@ -1,0 +1,226 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { published, formatDate, refSlug } from '@/lib/collections';
+import { orgResolver } from '@/lib/links';
+
+export async function getStaticPaths() {
+  const builds = await getCollection('builds', published);
+  return builds.map((build) => ({
+    params: { slug: build.slug },
+    props: { build },
+  }));
+}
+
+const { build } = Astro.props;
+const { Content } = await build.render();
+const {
+  title,
+  date,
+  summary,
+  kind,
+  status,
+  materials,
+  components,
+  tools,
+  dimensions,
+  finish,
+  buildTimeHours,
+  cost,
+  repoUrl,
+  plansUrl,
+  downloads,
+  heroImage,
+  images,
+  org,
+  project,
+} = build.data;
+
+const kindLabels: Record<string, string> = {
+  woodworking: 'Woodworking',
+  electronics: 'Electronics',
+  mixed: 'Wood + electronics',
+};
+
+const statusLabels: Record<string, string> = {
+  planned: 'Planned',
+  'in-progress': 'In progress',
+  complete: 'Complete',
+  retired: 'Retired',
+};
+
+const orgs = await orgResolver();
+const orgName = orgs.name(org);
+const orgHref = orgs.href(org);
+
+// Printed parts used here. Resolved by hand rather than with `getEntry` so a
+// draft model still renders its title instead of blowing up the build.
+const modelBySlug = new Map((await getCollection('models')).map((m) => [m.slug, m]));
+const usedModels = build.data.models
+  .map((ref) => modelBySlug.get(refSlug(ref) ?? ''))
+  .filter((model): model is NonNullable<typeof model> => model !== undefined);
+
+const projectSlug = refSlug(project);
+
+const formattedDate = formatDate(date);
+
+const hero = heroImage ?? images[0];
+const gallery = images.filter((src) => src !== hero);
+
+const specRows = [
+  ['Dimensions', dimensions],
+  ['Finish', finish],
+  [
+    'Bench time',
+    buildTimeHours === undefined
+      ? undefined
+      : `${buildTimeHours} ${buildTimeHours === 1 ? 'hour' : 'hours'}`,
+  ],
+  ['Cost', cost],
+].filter((row): row is [string, string] => row[1] !== undefined);
+
+// The three parts lists render identically; only the heading changes.
+const partsLists = [
+  { label: 'Materials', items: materials },
+  { label: 'Components', items: components },
+  { label: 'Tools', items: tools },
+].filter((list) => list.items.length > 0);
+---
+
+<BaseLayout title={`${title} | Jeff Everhart`} description={summary}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <p class="text-xs text-gray-500 font-sans mb-2">
+      <a href="/work/builds" class="text-brand-blue hover:text-brand-yellow transition-colors">Builds</a>
+      <span> &middot; {formattedDate}</span>
+      <span> &middot; {kindLabels[kind] ?? kind}</span>
+      {status !== 'complete' && <span> &middot; {statusLabels[status] ?? status}</span>}
+    </p>
+
+    <h1 class="font-sans text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{title}</h1>
+
+    {hero && (
+      <img src={hero} alt="" class="w-full rounded-lg border border-gray-100 mb-8" />
+    )}
+
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+
+    {specRows.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Specs
+        </h2>
+        <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 font-sans text-sm">
+          {specRows.map(([label, value]) => (
+            <div class="flex justify-between border-b border-gray-100 py-1.5">
+              <dt class="text-gray-500">{label}</dt>
+              <dd class="text-gray-900 font-medium">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {partsLists.map(({ label, items }) => (
+      <section class="mt-8">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-3">
+          {label}
+        </h2>
+        <ul class="flex flex-wrap gap-2">
+          {items.map((item) => (
+            <li class="bg-gray-100 text-gray-700 font-sans text-xs px-2.5 py-1 rounded">{item}</li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    {gallery.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Build photos
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {gallery.map((src) => (
+            <img src={src} alt="" loading="lazy" class="w-full rounded-lg border border-gray-100" />
+          ))}
+        </div>
+      </section>
+    )}
+
+    {usedModels.length > 0 && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Printed parts
+        </h2>
+        <ul class="space-y-1.5">
+          {usedModels.map((model) => (
+            <li class="font-serif text-sm">
+              <a
+                href={`/work/models/${model.slug}`}
+                class="text-brand-blue hover:text-brand-yellow transition-colors"
+              >
+                {model.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {(downloads.length > 0 || repoUrl || plansUrl) && (
+      <section class="mt-10">
+        <h2 class="section-title text-xs font-sans font-bold uppercase tracking-widest text-gray-400 mb-4">
+          Files &amp; plans
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          {downloads.map(({ label, href }) => (
+            <a
+              href={href}
+              class="inline-block bg-brand-yellow hover:bg-yellow-500 text-gray-900 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+          {repoUrl && (
+            <a
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block border border-gray-300 hover:border-brand-blue text-gray-700 hover:text-brand-blue font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+            >
+              Code<span aria-hidden="true"> &nearr;</span>
+            </a>
+          )}
+          {plansUrl && (
+            <a
+              href={plansUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block border border-gray-300 hover:border-brand-blue text-gray-700 hover:text-brand-blue font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+            >
+              Plans I followed<span aria-hidden="true"> &nearr;</span>
+            </a>
+          )}
+        </div>
+      </section>
+    )}
+
+    {(orgName || projectSlug) && (
+      <p class="mt-10 font-sans text-xs text-gray-500">
+        Part of
+        {projectSlug && (
+          <a href={`/work/projects/${projectSlug}`} class="text-brand-blue hover:text-brand-yellow transition-colors"> this project</a>
+        )}
+        {projectSlug && orgName && <span>, built for</span>}
+        {orgName && (
+          orgHref ? (
+            <a href={orgHref} class="text-brand-blue hover:text-brand-yellow transition-colors"> {orgName}</a>
+          ) : (
+            <span> {orgName}</span>
+          )
+        )}<span>.</span>
+      </p>
+    )}
+  </article>
+</BaseLayout>

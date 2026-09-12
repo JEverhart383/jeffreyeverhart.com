@@ -1,7 +1,18 @@
 ---
-import { navLinks } from '@/config/nav';
+import { navLinks, type NavLink } from '@/config/nav';
 
 const currentPath = Astro.url.pathname;
+
+/** A link is active on its own page and anywhere beneath it. */
+function isActive(href: string | undefined): boolean {
+  if (!href) return false;
+  return currentPath === href || (href !== '/' && currentPath.startsWith(href));
+}
+
+/** A dropdown is active when any of its children is. */
+function isGroupActive(link: NavLink): boolean {
+  return (link.children ?? []).some((child) => isActive(child.href));
+}
 ---
 
 <header class="site-nav fixed top-0 left-0 right-0 z-50 bg-brand-blue border-b-4 border-brand-yellow">
@@ -9,16 +20,64 @@ const currentPath = Astro.url.pathname;
     <a href="/" class="brand-logo font-brand text-white text-2xl leading-none mr-auto">JE</a>
 
     <nav class="hidden sm:flex items-center gap-6">
-      {navLinks.map(({ href, label }) => (
-        <a
-          href={href}
-          class:list={[
-            'font-sans text-white hover:text-brand-yellow transition-colors text-sm font-medium',
-            { 'underline': currentPath === href || (href !== '/' && currentPath.startsWith(href)) }
-          ]}
-        >
-          {label}
-        </a>
+      {navLinks.map((link) => (
+        link.children ? (
+          <div class="nav-group relative">
+            {/* A parent with an href stays clickable; one without is just a menu label. */}
+            {link.href ? (
+              <a
+                href={link.href}
+                class:list={[
+                  'nav-group-trigger font-sans text-white hover:text-brand-yellow transition-colors text-sm font-medium flex items-center gap-1',
+                  { 'underline': isActive(link.href) || isGroupActive(link) }
+                ]}
+              >
+                {link.label}
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                </svg>
+              </a>
+            ) : (
+              <button
+                type="button"
+                class:list={[
+                  'nav-group-trigger font-sans text-white hover:text-brand-yellow transition-colors text-sm font-medium flex items-center gap-1',
+                  { 'underline': isGroupActive(link) }
+                ]}
+              >
+                {link.label}
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                </svg>
+              </button>
+            )}
+            <div class="nav-dropdown absolute left-0 top-full pt-2 min-w-[12rem]">
+              <div class="bg-brand-blue border border-blue-700 rounded-b shadow-lg py-1">
+                {link.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class:list={[
+                      'block px-4 py-2 font-sans text-white hover:text-brand-yellow hover:bg-blue-800 transition-colors text-sm',
+                      { 'underline': isActive(child.href) }
+                    ]}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a
+            href={link.href}
+            class:list={[
+              'font-sans text-white hover:text-brand-yellow transition-colors text-sm font-medium',
+              { 'underline': isActive(link.href) }
+            ]}
+          >
+            {link.label}
+          </a>
+        )
       ))}
     </nav>
 
@@ -45,8 +104,27 @@ const currentPath = Astro.url.pathname;
   </div>
 
   <div id="mobile-menu" class="hidden sm:hidden bg-brand-blue px-4 pb-3 border-t border-blue-700">
-    {navLinks.map(({ href, label }) => (
-      <a href={href} class="block text-white hover:text-brand-yellow py-2 font-sans text-sm">{label}</a>
+    {navLinks.map((link) => (
+      link.children ? (
+        <div class="py-2">
+          {link.href ? (
+            <a href={link.href} class="block font-sans text-xs uppercase tracking-widest text-blue-200 hover:text-brand-yellow py-1">
+              {link.label}
+            </a>
+          ) : (
+            <p class="font-sans text-xs uppercase tracking-widest text-blue-200">{link.label}</p>
+          )}
+          {link.children.map((child) => (
+            <a href={child.href} class="block text-white hover:text-brand-yellow py-2 pl-3 font-sans text-sm">
+              {child.label}
+            </a>
+          ))}
+        </div>
+      ) : (
+        <a href={link.href} class="block text-white hover:text-brand-yellow py-2 font-sans text-sm">
+          {link.label}
+        </a>
+      )
     ))}
   </div>
 </header>
@@ -59,4 +137,18 @@ const currentPath = Astro.url.pathname;
 
 <style>
   :global(body) { padding-top: 3.5rem; }
+
+  /* CSS-only dropdown. `focus-within` covers the trigger button itself, so
+     tabbing to it reveals the menu and makes the links focusable. */
+  .nav-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+
+  .nav-group:hover .nav-dropdown,
+  .nav-group:focus-within .nav-dropdown {
+    visibility: visible;
+    opacity: 1;
+  }
 </style>

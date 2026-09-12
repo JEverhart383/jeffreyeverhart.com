@@ -1,0 +1,92 @@
+---
+import { formatDate } from '@/lib/collections';
+interface Props {
+  title: string;
+  date: Date;
+  /** Replaces the formatted `date` — for spans like "2019 – 2021". */
+  dateLabel?: string;
+  summary?: string;
+  image?: string;
+  /** Line above the title — publisher, show name, venue. */
+  meta?: string;
+  /** Small pill over the thumbnail, e.g. a duration or format. */
+  badge?: string;
+  /** Where the card links. Omit for entries with nowhere to point. */
+  href?: string;
+  external?: boolean;
+  cta?: string;
+  /** The original is gone: suppress the outbound link and say so. */
+  dead?: boolean;
+}
+
+const {
+  title,
+  date,
+  dateLabel,
+  summary,
+  image,
+  meta,
+  badge,
+  href,
+  external = false,
+  cta = 'View',
+  dead = false,
+} = Astro.props;
+
+const formattedDate = dateLabel ?? formatDate(date);
+
+const linkHref = dead ? undefined : href;
+const linkAttrs = external && !dead
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {};
+---
+
+<article class="post-card bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden flex flex-row">
+  {image && (
+    <div class="hidden md:flex items-center w-36 lg:w-48 shrink-0 bg-gray-50">
+      <div class="relative w-full aspect-video">
+        <img src={image} alt="" class="w-full h-full object-cover" loading="lazy" />
+        {badge && (
+          <span class="absolute bottom-1 right-1 bg-black/75 text-white text-[11px] font-sans px-1.5 py-0.5 rounded">
+            {badge}
+          </span>
+        )}
+      </div>
+    </div>
+  )}
+  <div class="p-4 sm:p-6 flex flex-col justify-between flex-1 min-w-0">
+    <div>
+      <p class="post-meta text-xs text-gray-500 font-sans mb-1">
+        {formattedDate}
+        {meta && <span> &middot; {meta}</span>}
+        {!image && badge && <span> &middot; {badge}</span>}
+      </p>
+      <h2 class="text-lg sm:text-xl font-sans font-bold text-gray-900 mb-2">
+        {linkHref ? (
+          <a href={linkHref} {...linkAttrs} class="hover:text-brand-blue transition-colors">{title}</a>
+        ) : (
+          title
+        )}
+      </h2>
+      {summary && (
+        <p class="post-excerpt font-serif text-gray-600 text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">
+          {summary}
+        </p>
+      )}
+    </div>
+
+    {dead ? (
+      <p class="mt-3 sm:mt-4 font-sans text-xs text-gray-500 italic">
+        The original is no longer online. A copy is kept in the archive.
+      </p>
+    ) : linkHref ? (
+      <a
+        href={linkHref}
+        {...linkAttrs}
+        class="read-more mt-3 sm:mt-4 inline-block bg-brand-yellow hover:bg-yellow-500 text-gray-900 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors self-start"
+      >
+        {cta}{external && <span aria-hidden="true"> &nearr;</span>}
+      </a>
+    ) : null}
+  </div>
+</article>

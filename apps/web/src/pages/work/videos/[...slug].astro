@@ -1,0 +1,78 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { published, formatDate, hasBody } from '@/lib/collections';
+import { orgResolver } from '@/lib/links';
+
+export async function getStaticPaths() {
+  // Only videos with commentary need a page of their own — the rest are just
+  // links, and a page for them would be an empty doorway.
+  const videos = (await getCollection('videos', published)).filter(
+    hasBody
+  );
+
+  return videos.map((video) => ({
+    params: { slug: video.slug },
+    props: { video },
+  }));
+}
+
+const { video } = Astro.props;
+const { Content } = await video.render();
+const { title, date, summary, url, videoId, org, publisher, series, archive } = video.data;
+
+const orgs = await orgResolver();
+const orgName = orgs.name(org);
+const orgHref = orgs.href(org);
+
+const formattedDate = formatDate(date);
+const isDead = archive?.linkStatus === 'dead';
+---
+
+<BaseLayout title={`${title} | Jeff Everhart`} description={summary}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <p class="text-xs text-gray-500 font-sans mb-2">
+      <a href="/work/videos" class="text-brand-blue hover:text-brand-yellow transition-colors">Videos</a>
+      <span> &middot; {formattedDate}</span>
+      {orgName && orgHref && (
+        <span> &middot; <a href={orgHref} class="text-brand-blue hover:text-brand-yellow transition-colors">{orgName}</a></span>
+      )}
+      {publisher && <span> &middot; {publisher}</span>}
+      {series && <span> &middot; {series}</span>}
+    </p>
+
+    <h1 class="font-sans text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{title}</h1>
+
+    {videoId && !isDead && (
+      <div class="aspect-video mb-8 rounded-lg overflow-hidden bg-black">
+        <iframe
+          class="w-full h-full"
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          title={title}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    )}
+
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+
+    {isDead ? (
+      <p class="mt-8 font-sans text-sm text-gray-500 italic">
+        The original is no longer online. A copy is kept in the archive.
+      </p>
+    ) : (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-8 inline-block bg-brand-yellow hover:bg-yellow-500 text-gray-900 font-sans font-semibold text-sm px-4 py-2 rounded transition-colors"
+      >
+        Watch on {orgName ? `${orgName}'s channel` : 'YouTube'}<span aria-hidden="true"> &nearr;</span>
+      </a>
+    )}
+  </article>
+</BaseLayout>
