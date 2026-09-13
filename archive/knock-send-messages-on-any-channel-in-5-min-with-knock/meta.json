@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=bVFkX8MnI-g",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Send messages on any channel in 5 min with Knock | Email, In-app, Slack, SMS, Push, Teams",
+  "videoId": "bVFkX8MnI-g",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-04-16",
+  "durationSeconds": 292,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "7d9f17266d12329ed332cc08462f740f2620f2f92221456a0406ea1151b8f39c"
+}

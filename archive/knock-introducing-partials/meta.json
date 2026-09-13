@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=O52CZ1qu2x8",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Introducing Partials",
+  "videoId": "O52CZ1qu2x8",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-08-14",
+  "durationSeconds": 1540,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "14944635712a7eba6b348b6efd9e740df9d728b34f396d30262fca4890b175df"
+}

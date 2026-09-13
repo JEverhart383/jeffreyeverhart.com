@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=pIEgr0GfP2E",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Introducing our new command menu (cmd+k)",
+  "videoId": "pIEgr0GfP2E",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-04-09",
+  "durationSeconds": 113,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "bb8c7a379a4b18d3950fd5f287ba2c02d9afe64e2ebd5aeebe225fba92c160e6"
+}

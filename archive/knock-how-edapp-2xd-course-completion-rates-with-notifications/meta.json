@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=VLSYNvn0vaM",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "How EdApp 2x'd course completion rates with notifications",
+  "videoId": "VLSYNvn0vaM",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-12-04",
+  "durationSeconds": 69,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "74b9e7f18c1d15b780cdd0bf0d5421232c991120576d86d22e5d568a0821f947"
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=Q0VSjeTJDp0",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Introducing data sources | Send messages from events in Stripe, Supabase, Clerk, WorkOS, and PostHog",
+  "videoId": "Q0VSjeTJDp0",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2026-04-09",
+  "durationSeconds": 222,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "a30b88e693a67a71035876879feb257d8d36cad7b9275359627246202b6622c9"
+}

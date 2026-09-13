@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=V-65frts9X0",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Building a Notion-style activity feed with Next.js and shadcn/ui",
+  "videoId": "V-65frts9X0",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-04-09",
+  "durationSeconds": 1815,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "16ade764c0d1865db0f4e49bc8c43c7db642832f083cba8dd444d6a5918ddd68"
+}

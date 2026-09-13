@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=JjVuTI6V_6k",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Sending in-app & email messages from Supabase database events",
+  "videoId": "JjVuTI6V_6k",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2026-05-01",
+  "durationSeconds": 854,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "3194788a4587655355d32bf78e17ff878c1347dc143e77a5c99015098e0839c5"
+}

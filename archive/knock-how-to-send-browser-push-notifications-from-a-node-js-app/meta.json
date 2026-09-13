@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=0-bSQ14H_PY",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "How to send browser push notifications from a Node.js app",
+  "videoId": "0-bSQ14H_PY",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-04-26",
+  "durationSeconds": 905,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "f55458fa56a35aaab83ec409ab5bac79add303b3908bf38d878eb8bcdac727c9"
+}

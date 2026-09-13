@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=o6k51xE1qBg",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "How to OAuth with Slack using Node.js and Express",
+  "videoId": "o6k51xE1qBg",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-01-29",
+  "durationSeconds": 1548,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "cd64b0c733aba7131a5aa47e9acc6a04e318f79e0955a7c2c621ee67c8776b94"
+}

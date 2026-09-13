@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=lKYfB3FYMtk",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Getting started with Knock Guides",
+  "videoId": "lKYfB3FYMtk",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-10-07",
+  "durationSeconds": 293,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "54add4440f2d924fb259a0460fbb1db5a3da796099492ae43093d72818f3fc2f"
+}

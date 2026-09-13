@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=bCvCSNzGo9s",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "How our throttling function works for high-volume messages",
+  "videoId": "bCvCSNzGo9s",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-04-21",
+  "durationSeconds": 241,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "40a559c9a6b4489d882940926fb06e500b365f768c817849ce936cf3b69ab29c"
+}

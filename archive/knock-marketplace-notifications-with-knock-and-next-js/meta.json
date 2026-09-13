@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=6h_mIWgjJFU",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Marketplace notifications with Knock and Next.js",
+  "videoId": "6h_mIWgjJFU",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-02-19",
+  "durationSeconds": 498,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "34e345bc0d2d217c1ade0f91cf889b7f2dc04aab26324d5b81aa6f2292022fa0"
+}

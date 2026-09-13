@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=6rIOkz9Kc20",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Get started with the Knock MCP server | Email, SMS, push, in-app, Slack",
+  "videoId": "6rIOkz9Kc20",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-06-03",
+  "durationSeconds": 624,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "263e0a1fe4d5c9d6ba907fbcea135b84b00e13b2e226d6c7958cb8dbc1d21464"
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=FCQGquTJlL0",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Getting started with preferences in Knock",
+  "videoId": "FCQGquTJlL0",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-06-10",
+  "durationSeconds": 1045,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "1c7ac825d7973d65c1349f847b5d439e82d68d2a1a51b650b9ba03ad4dc7bdff"
+}

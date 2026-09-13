@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=qQgoGLsdbJY",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Build an AI-powered CI/CD pipeline for translations with Lingo.dev",
+  "videoId": "qQgoGLsdbJY",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-03-04",
+  "durationSeconds": 485,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "290d3fdb49b2ae3171c968f6ea1763e46d373f1399f33a637f4e2a7361159d6c"
+}

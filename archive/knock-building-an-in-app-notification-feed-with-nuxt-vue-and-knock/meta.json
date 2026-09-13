@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=lMVnYHy8HdY",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Building an in-app notification feed with Nuxt, Vue, and Knock",
+  "videoId": "lMVnYHy8HdY",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-05-22",
+  "durationSeconds": 1728,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "7a3ec2451e31837f49153cef45faedabb81be7ae3a07aa46037b8741731d5d69"
+}

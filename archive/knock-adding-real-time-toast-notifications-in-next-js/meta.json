@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=U9uuW19i-u0",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Adding real-time toast notifications in Next.js",
+  "videoId": "U9uuW19i-u0",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-04-19",
+  "durationSeconds": 682,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "700547eae9de672a1fc63b7389016343d35cfad9b6502bc873a015e3d051ef6c"
+}

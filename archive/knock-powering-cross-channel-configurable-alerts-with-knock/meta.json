@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=Pnj864esV-w",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Powering cross-channel configurable alerts with Knock",
+  "videoId": "Pnj864esV-w",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-09-09",
+  "durationSeconds": 1312,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "79f5da0ab2661ff68f1f5c1b2c3553852afc119ebe9f2f1a9d7c386e3ce7a356"
+}

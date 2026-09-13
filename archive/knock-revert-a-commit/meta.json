@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=jwJAR_Gw-Fo",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Revert a commit",
+  "videoId": "jwJAR_Gw-Fo",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-04-11",
+  "durationSeconds": 98,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "3ad7c74c028a3a92173be712b7caf6ec23996072e1da82ec3da740a8ffbc121b"
+}

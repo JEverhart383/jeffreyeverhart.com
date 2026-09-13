@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=Ud_zO5nCRy4",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Workflow builder V 3.0",
+  "videoId": "Ud_zO5nCRy4",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-10-31",
+  "durationSeconds": 1551,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "eda9e363bc744d461bd68a63d7cccee796e1f6082942ddbf680920fd74609967"
+}

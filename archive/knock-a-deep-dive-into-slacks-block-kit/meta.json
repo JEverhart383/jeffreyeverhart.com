@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=aTtgcLrVK-E",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "A deep dive into Slack's Block Kit",
+  "videoId": "aTtgcLrVK-E",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-02-06",
+  "durationSeconds": 1349,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "f70ce9ecacad6f1cd0aba8335ef44fea1d9cc591e4d09fffdd866c4461dabdb4"
+}

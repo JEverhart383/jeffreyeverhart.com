@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=27qCR6DFCDs",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Knock CLI basics: notification workflows in code",
+  "videoId": "27qCR6DFCDs",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-01-19",
+  "durationSeconds": 476,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "1f9bbc017a9679e4956d6cd6e10e1c3afa35cdf2bf26357d563f8ad60dffb796"
+}

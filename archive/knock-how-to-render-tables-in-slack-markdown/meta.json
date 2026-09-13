@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=UhW4zZJOFtM",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "How to render tables in Slack markdown",
+  "videoId": "UhW4zZJOFtM",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-06-21",
+  "durationSeconds": 596,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "0f9cabb4cdb24a20422b698588a2348d5b535f9033b893accae6dbc6e44d728d"
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=yN0A_wjaWmc",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "How to send in-app notifications with Next.js",
+  "videoId": "yN0A_wjaWmc",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2023-12-19",
+  "durationSeconds": 2010,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "6753bdd75c42b6655cc1a55652e5092ab21de2ce63fbd1e1a09a1ac177b9b117"
+}

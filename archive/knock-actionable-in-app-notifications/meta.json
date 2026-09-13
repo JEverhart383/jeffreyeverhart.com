@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=OVSMjJMTqvk",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Actionable in-app notifications",
+  "videoId": "OVSMjJMTqvk",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-06-07",
+  "durationSeconds": 200,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "ef5923c8af43d4fb96cce5e9c48818c74f9dec60bdb90cf4e6ffa95b54179c52"
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=kU6Fea3QxEc",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Adding real-time toast notifications in Nuxt and Vue",
+  "videoId": "kU6Fea3QxEc",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-05-28",
+  "durationSeconds": 793,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "9393b81af0632676e042be663f645a272db66725a409fc40b13f5a023d188d21"
+}

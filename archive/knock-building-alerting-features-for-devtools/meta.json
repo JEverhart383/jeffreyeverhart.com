@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=h3HHZHCSU5E",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Building alerting features for devtools | Nullstone and Knock",
+  "videoId": "h3HHZHCSU5E",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-01-09",
+  "durationSeconds": 1622,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "1f0eac56dd0e6c0ee3d037058603bf0071d4347ae94a3ed8565fdb2b9481d211"
+}

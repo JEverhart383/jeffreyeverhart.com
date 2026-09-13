@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=HKYu-u4pPs4",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Announcing Knock CLI 1.0 | Develop product messaging in your code base",
+  "videoId": "HKYu-u4pPs4",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2026-01-06",
+  "durationSeconds": 476,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "eab29d30b316261b55460fba99af83986dee970467a32ff87f39e9418f471175"
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=BJ4X390PQLE",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Email API benchmarks launch video",
+  "videoId": "BJ4X390PQLE",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2026-03-12",
+  "durationSeconds": 199,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "39606f30f5c82369b8ef61e839ac03943ff7c888031659f65a7a72bee3664933"
+}

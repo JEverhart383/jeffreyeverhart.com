@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=J8dEd6T03vU",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Announcing send windows",
+  "videoId": "J8dEd6T03vU",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-04-10",
+  "durationSeconds": 113,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "2ce3c82a3cf66ae18961d7fc2065458ad7dc75c7cdc03401108376109fa722c0"
+}

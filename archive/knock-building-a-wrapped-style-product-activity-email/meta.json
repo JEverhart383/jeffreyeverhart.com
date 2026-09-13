@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=HI82nxDomEo",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Building a 'wrapped-style' product activity email | Next.js, Tinybird, Knock",
+  "videoId": "HI82nxDomEo",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-03-14",
+  "durationSeconds": 525,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "0732e7b51cf2b6f48eec9824d4ed59a4c4c491bf340a48c80a19a38d1452bfd6"
+}

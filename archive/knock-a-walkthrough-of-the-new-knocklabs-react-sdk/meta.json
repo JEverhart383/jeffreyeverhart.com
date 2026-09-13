@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=nFsXI5NYPHo",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "A walkthrough of the new @knocklabs/react SDK",
+  "videoId": "nFsXI5NYPHo",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-01-26",
+  "durationSeconds": 243,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "bcf7c361b5d9a4d8a31452b5606ed027994a4b274d28561c78de1d67ba5e92ae"
+}

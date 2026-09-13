@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=_H2afclrrNM",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Create notification workflows with Knock MCP Server | Email, SMS, push, in-app, Slack",
+  "videoId": "_H2afclrrNM",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-06-06",
+  "durationSeconds": 830,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "a80544a380d6396bb6b6c6da4f93c560f8257eb98c923b3d56786c1d1a606093"
+}

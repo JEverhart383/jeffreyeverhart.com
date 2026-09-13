@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=vWMjOdB5Ozs",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Learn Slack's markdown syntax",
+  "videoId": "vWMjOdB5Ozs",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-03-13",
+  "durationSeconds": 573,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "7f281ec15118860f54913a6a1277584dd09b382474692aab04ba5957e3b1c9d5"
+}

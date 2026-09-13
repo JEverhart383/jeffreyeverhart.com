@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=rXbKCa4g0kg",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Introducing TeamsKit",
+  "videoId": "rXbKCa4g0kg",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-01-30",
+  "durationSeconds": 1293,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "724a8c9c2d05655a25efc826f0e52c9fd3c3ea31d7c8174a7047b243f9b4d22c"
+}

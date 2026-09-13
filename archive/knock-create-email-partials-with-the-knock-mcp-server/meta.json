@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=B4dU9LQzcDQ",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Create email partials with the Knock MCP server",
+  "videoId": "B4dU9LQzcDQ",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2025-07-02",
+  "durationSeconds": 704,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "365d391d5b5f01c8cd6bfce24017cf0f6042b6ffcc6cea462912ec98b6a808c2"
+}

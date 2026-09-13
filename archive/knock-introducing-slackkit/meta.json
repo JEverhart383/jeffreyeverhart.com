@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=xsw24iuUTLg",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Introducing SlackKit",
+  "videoId": "xsw24iuUTLg",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-03-21",
+  "durationSeconds": 630,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "b81e13ae0bc5a267889de172a6ef961c2639bd123700203c38a4621e13690993"
+}
