@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/how-we-think-about-writing-for-robots-with-llms-txt",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "How we think about writing for robots with llms.txt",
+  "author": "Jeff Everhart",
+  "publishedAt": "2025-03-28",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "1806",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "5c1d11c9cedf4c865114134fdcf0b8d889d8c86a04aa74e47f4fa69fdd3bc617"
+}

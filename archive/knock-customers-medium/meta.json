@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/customers-medium",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "How Medium turned notifications from an engineering bottleneck into a growth engine",
+  "author": "Jeff Everhart",
+  "publishedAt": "2026-02-10",
+  "publisher": "Knock",
+  "categories": [
+    "customers"
+  ],
+  "wordCount": "2165",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "eff0654d441143486028c05274aa65d9b74fa2528fa75ee7e4b99f47f13226d7"
+}

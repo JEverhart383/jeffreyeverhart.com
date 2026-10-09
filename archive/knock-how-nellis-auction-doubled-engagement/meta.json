@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/how-nellis-auction-doubled-engagement",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "How Nellis Auction doubled engagement while boosting cost efficiency",
+  "author": "Jeff Everhart",
+  "publishedAt": "2025-12-16",
+  "publisher": "Knock",
+  "categories": [
+    "customers"
+  ],
+  "wordCount": "1971",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "ea4ad996077351c0eb508bfa2736329e58424ec5059c314ac4df433042f3ee67"
+}

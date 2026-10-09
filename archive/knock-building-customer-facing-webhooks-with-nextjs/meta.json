@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/building-customer-facing-webhooks-with-nextjs",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Building customer-facing webhooks with Next.js",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-07-18",
+  "publisher": "Knock",
+  "categories": [
+    "guides"
+  ],
+  "wordCount": "2213",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "ed49a5a8f5ebea85e9a4b267ecbb73db70f153ff70bb4fd1f21378304c01e9ca"
+}

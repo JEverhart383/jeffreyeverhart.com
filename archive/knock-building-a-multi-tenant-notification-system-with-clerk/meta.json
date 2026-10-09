@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/building-a-multi-tenant-notification-system-with-clerk",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Building a multi-tenant notification system with Clerk",
+  "author": "Jeff Everhart",
+  "publishedAt": "2026-04-28",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "2106",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "66f7ecfa3f46f7ea8121fc227ef159a7d6d54d2b38ffac2766b282182e5be9c8"
+}

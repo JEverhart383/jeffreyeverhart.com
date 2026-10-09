@@ -1,15 +1,20 @@
 {
-  "url": "https://www.youtube.com/watch?v=HlwE3zZceFQ",
+  "url": "https://knock.app/blog/building-an-inbox-to-simplify-support",
   "capturedAt": "2026-09-13T00:00:00Z",
-  "title": "Building an inbox to simplify support | Thena.ai and Knock",
-  "videoId": "HlwE3zZceFQ",
-  "platform": "youtube",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Building an inbox to simplify support",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-09-19",
   "publisher": "Knock",
-  "uploadDate": "2024-09-19",
-  "durationSeconds": 1584,
-  "capturedWith": "yt-dlp 2026.08.19",
-  "captured": [
-    "description.md"
+  "categories": [
+    "product"
   ],
-  "sha256": "47ff310d2b2c26ae5f93f4c86dd12b83bd46e743a584ead2078b4b870e8f5b60"
+  "wordCount": "922",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "31225ab835abfcafdd5a02961e17623ae9d37117e37103f5b41b1641a96cc2f3"
 }

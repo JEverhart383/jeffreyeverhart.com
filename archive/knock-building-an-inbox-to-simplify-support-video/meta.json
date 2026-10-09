@@ -1,0 +1,15 @@
+{
+  "url": "https://www.youtube.com/watch?v=HlwE3zZceFQ",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "title": "Building an inbox to simplify support | Thena.ai and Knock",
+  "videoId": "HlwE3zZceFQ",
+  "platform": "youtube",
+  "publisher": "Knock",
+  "uploadDate": "2024-09-19",
+  "durationSeconds": 1584,
+  "capturedWith": "yt-dlp 2026.08.19",
+  "captured": [
+    "description.md"
+  ],
+  "sha256": "47ff310d2b2c26ae5f93f4c86dd12b83bd46e743a584ead2078b4b870e8f5b60"
+}

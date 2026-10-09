@@ -10,7 +10,7 @@ org: knock
 publisher: "Knock"
 tags: ["slack"]
 archive:
-  slug: knock-how-to-render-tables-in-slack-markdown
+  slug: knock-how-to-render-tables-in-slack-markdown-video
   capturedAt: 2026-09-13
   linkStatus: live
 draft: true

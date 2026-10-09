@@ -1,15 +1,20 @@
 {
-  "url": "https://www.youtube.com/watch?v=UhW4zZJOFtM",
+  "url": "https://knock.app/blog/how-to-render-tables-in-slack-markdown",
   "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
   "title": "How to render tables in Slack markdown",
-  "videoId": "UhW4zZJOFtM",
-  "platform": "youtube",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-05-15",
   "publisher": "Knock",
-  "uploadDate": "2024-06-21",
-  "durationSeconds": 596,
-  "capturedWith": "yt-dlp 2026.08.19",
-  "captured": [
-    "description.md"
+  "categories": [
+    "engineering"
   ],
-  "sha256": "0f9cabb4cdb24a20422b698588a2348d5b535f9033b893accae6dbc6e44d728d"
+  "wordCount": "1538",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "18f11aa938f5a4f5e31792308e967d0a16c1d9d0d60201797079be627786bb03"
 }

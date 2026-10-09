@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/getting-started-with-in-app-messaging",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Getting started with in-app messaging",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-09-05",
+  "publisher": "Knock",
+  "categories": [
+    "product"
+  ],
+  "wordCount": "1497",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "63bc161fd24bc38750412cd10d0bbf30f7646b3fc5fb7cd4dccd80834a91feae"
+}

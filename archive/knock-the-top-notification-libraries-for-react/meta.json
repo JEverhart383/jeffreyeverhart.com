@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/the-top-notification-libraries-for-react",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Top 9 React notification libraries in 2026",
+  "author": "Jeff Everhart",
+  "publishedAt": "2025-12-08",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "2514",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "2432c8c852cb2118fd192151e9ec4997843f67173c5bc041f99858cb7a39000d"
+}

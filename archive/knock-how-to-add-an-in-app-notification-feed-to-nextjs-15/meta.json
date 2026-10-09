@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/how-to-add-an-in-app-notification-feed-to-nextjs-15",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "How to add an in-app notification feed to Next.js",
+  "author": "Jeff Everhart",
+  "publishedAt": "2025-05-23",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "1381",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "a75189eaca33e7c02e15b8a06dee592cf11dd3b0cad132e5e19216d442a6a570"
+}

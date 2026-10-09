@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/getting-started-with-slack-kit",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Getting started with SlackKit",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-03-26",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "2493",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "ebdfe2c61c540cd050f24b6a7629ec7cb331cd16dca2988dbb88197fa2fc33fd"
+}

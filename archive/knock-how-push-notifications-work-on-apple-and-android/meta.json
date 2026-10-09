@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/how-push-notifications-work-on-apple-and-android",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "How push notifications work on Apple and Android",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-04-11",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "1686",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "ebde29d805f26285902be0755c8038d9b6a374b35938dda9b0119debb4aea514"
+}

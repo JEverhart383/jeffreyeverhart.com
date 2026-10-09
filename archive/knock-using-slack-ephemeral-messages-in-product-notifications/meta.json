@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/using-slack-ephemeral-messages-in-product-notifications",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Using Slack ephemeral messages in product notifications",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-06-20",
+  "publisher": "Knock",
+  "categories": [
+    "guides"
+  ],
+  "wordCount": "3101",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "7eb511e9377c43b36c68fd1931cffbb7d4c35cb789dae51273c07ec9e1c644c9"
+}

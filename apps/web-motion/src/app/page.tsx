@@ -74,6 +74,13 @@ const topics = [
     status: "ready",
   },
   {
+    slug: "particle-cta",
+    title: "Particle CTA",
+    library: "WebGL",
+    description: "The particle text shader as a real call-to-action: particles sampled from a live <h2>'s layout, font and per-span color, over plain accessible HTML.",
+    status: "ready",
+  },
+  {
     slug: "svg-morphing",
     title: "SVG Path Morphing",
     library: "GSAP",

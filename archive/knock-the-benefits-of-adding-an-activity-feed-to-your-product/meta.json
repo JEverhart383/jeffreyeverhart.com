@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/the-benefits-of-adding-an-activity-feed-to-your-product",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "The benefits of adding an activity feed to your B2B product",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-04-05",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "2064",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "9bbb55f6bbd2edea8ea4065ec776602c12a8f9762d8be39e6a54edde977e06b4"
+}

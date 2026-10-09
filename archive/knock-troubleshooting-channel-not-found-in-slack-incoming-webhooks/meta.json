@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/troubleshooting-channel-not-found-in-slack-incoming-webhooks",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Troubleshooting channel_not_found in Slack incoming webhooks",
+  "author": "Jeff Everhart",
+  "publishedAt": "2025-04-22",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "741",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "9a9fb3d1cb2c9345182901d953688386dfbcf41a10771e29355ac6684fff7a84"
+}

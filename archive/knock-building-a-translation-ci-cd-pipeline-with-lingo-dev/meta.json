@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/building-a-translation-ci-cd-pipeline-with-lingo-dev",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Building a translation CI/CD pipeline with Lingo.dev",
+  "author": "Jeff Everhart",
+  "publishedAt": "2025-03-04",
+  "publisher": "Knock",
+  "categories": [
+    "guides"
+  ],
+  "wordCount": "1578",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "5081a32c143bce6b33fa6f15318d448a4727d1b2cdb4244ff245f7564c3bd812"
+}

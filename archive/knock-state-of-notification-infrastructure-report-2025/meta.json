@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/state-of-notification-infrastructure-report-2025",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "State of notification infrastructure report 2025",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-12-12",
+  "publisher": "Knock",
+  "categories": [
+    "company"
+  ],
+  "wordCount": "3379",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "5f25d5f160b0f74cc64c85d5f76f2c1088264d7192544e98e39fbbab57be2084"
+}

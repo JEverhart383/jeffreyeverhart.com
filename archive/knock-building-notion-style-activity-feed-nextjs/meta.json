@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/building-notion-style-activity-feed-nextjs",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "Building a Notion-style activity feed with Next.js and shadcn/ui",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-04-25",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "2620",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "ddb9e618f37ef5e796c3ebf7b3fe41cd522669d778a40cd85288c8287a7287f6"
+}

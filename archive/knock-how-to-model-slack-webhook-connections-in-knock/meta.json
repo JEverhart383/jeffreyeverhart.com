@@ -1,0 +1,20 @@
+{
+  "url": "https://knock.app/blog/how-to-model-slack-webhook-connections-in-knock",
+  "capturedAt": "2026-09-13T00:00:00Z",
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "title": "How to model Slack webhook connections in Knock",
+  "author": "Jeff Everhart",
+  "publishedAt": "2024-02-13",
+  "publisher": "Knock",
+  "categories": [
+    "engineering"
+  ],
+  "wordCount": "2018",
+  "capturedWith": "curl + __NEXT_DATA__ extraction",
+  "captured": [
+    "index.md",
+    "original.html"
+  ],
+  "sha256": "ee6efa8491f1fafd0ca627cf5d138f601217584db98ceca99a0751ddc5ada2ef"
+}

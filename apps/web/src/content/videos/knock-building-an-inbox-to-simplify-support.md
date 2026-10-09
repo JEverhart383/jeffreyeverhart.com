@@ -10,7 +10,7 @@ org: knock
 publisher: "Knock"
 tags: ["slack", "microsoft-teams", "ai", "email"]
 archive:
-  slug: knock-building-an-inbox-to-simplify-support
+  slug: knock-building-an-inbox-to-simplify-support-video
   capturedAt: 2026-09-13
   linkStatus: live
 draft: true
