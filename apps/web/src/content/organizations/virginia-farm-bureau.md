@@ -1,27 +1,25 @@
 ---
 name: "Virginia Farm Bureau"
 highlights:
-  - "Built web and mobile experiences for 140K+ members and policy holders"
-  - "Built internal systems for ~1000 employees"
+  - "Built responsive web experiences for 140K+ members and policy holders"
+  - "Built an internal open enrollment system for ~1000 employees"
+  - "Introduced an internal utility-based CSS framework before Tailwind was cool"
 kind: company
 url: "https://www.vafb.com/"
 location: "Richmond, VA"
 logo: "/media/Screen-Shot-2017-01-06-at-9.39.20-PM-1-1024x553.png"
 positions:
   - title: "Web Developer II"
-    startDate: 2016-01-01   # PLACEHOLDER — set the real dates
-    endDate: 2017-01-01
+    startDate: 2016-04-01   # PLACEHOLDER — set the real dates
+    endDate: 2017-06-01
 tags: []
-draft: true
 ---
 
 I developed web and mobile experiences for VFB's 140K+ members and policy
-holders and created internal systems for ~1000 employees. I spent most of my
-time translating mockups into HTML/CSS, building interactive UIs with JS, or
-writing RESTful backend services in C# or SQL. We used a lot of different
-technologies from the Microsoft stack and worked with a lot of third-party
-systems. I did a little work with IIS and some elements of database design. I
-implemented a CSS style guide and component library so all of our developers and
-content admins could save time when writing code while promoting
-maintainability. This role involved a high level of collaboration with project
-managers, business analysts, and designers.
+holders and created internal systems for ~1000 employees. This was a Microsoft shop and we worked with a lot of third-party systems for quoting.
+
+I spent most of my time translating mockups into HTML/CSS, building interactive UIs with JS, and
+writing RESTful backend services in C# and SQL. 
+
+I collaborated with some great designers an UX specialists, and we drove a ton of branding improvements across the site. We implemented a basic component library, an internal utility-based CSS framework, and an extensive web style guide so content admins could save time when writing code while promoting
+maintainability.

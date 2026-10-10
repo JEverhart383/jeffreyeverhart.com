@@ -1,8 +1,10 @@
 ---
 name: "WP Engine"
 highlights:
-  - "Educated 1000's of developers on headless CMS and web framework best practices"
-  - "Built out a new product line for the world's largest managed WordPress host"
+  - "Educated 1000's of developers on headless CMS and web framework best practices across writing, videos, and live events"
+  - "Supported a Node-based hosting product for the world's largest managed WordPress company"
+  - "Contributed to open-source frameworks and plugins like Faust.js and WP GraphQL, which are used by ten of thousands of developers"
+  - "Led a full rebuild of Atlas platform docs on Astro starlight"
 kind: company
 url: "https://developers.wpengine.com/docs/"
 positions:
